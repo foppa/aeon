@@ -310,6 +310,55 @@
 			<fadetime>200</fadetime>		
 		</include>
 	
+	<!-- TV Normal -->
+	
+		<include name="MultiplexIconDimensionsTVWrap">
+			<posx>4</posx>
+			<posy>0</posy>
+			<width>204</width>
+			<height>114</height>	
+		</include>
+		
+		<include name="MultiplexIconDimensionsTVWrapReflect">
+			<posx>4</posx>
+			<posy>113</posy>
+			<width>204</width>
+			<height>114</height>
+			<colordiffuse>aaFFFFFF</colordiffuse>		
+		</include>
+	
+	<!-- TV DVD -->
+	
+		<include name="MultiplexIconDimensionsTVWrapDVDCase">
+			<posx>0</posx>
+			<posy>-4</posy>
+			<width>216</width>
+			<height>128</height>	
+		</include>
+		
+		<include name="MultiplexIconDimensionsTVWrapReflectDVDCase">
+			<posx>0</posx>
+			<posy>112</posy>
+			<width>216</width>
+			<height>128</height>
+			<colordiffuse>aaFFFFFF</colordiffuse>		
+		</include>
+	
+		<include name="MultiplexIconDimensionsTVWrapDVD">
+			<posx>8</posx>
+			<posy>3</posy>
+			<width>200</width>
+			<height>112</height>	
+		</include>
+		
+		<include name="MultiplexIconDimensionsTVWrapReflectDVD">
+			<posx>8</posx>
+			<posy>121</posy>
+			<width>200</width>
+			<height>111</height>
+			<colordiffuse>aaFFFFFF</colordiffuse>		
+		</include>
+	
 
 <!-- SHOWCASE -->
 	

@@ -12,7 +12,6 @@
 	
 	<include name="TitleModVars">
 		<width>1070</width>
-		<posx>105</posx>
 		<posy>3</posy>
 		<font>Font_MultiplexTitleMod</font>
 		<include condition="!Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorLight</include>
@@ -35,6 +34,8 @@
 			
 			<control type="label">
 				<include>TitleModVars</include>
+				<posx>105</posx>
+				<align>center</align>
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<visible>Skin.HasSetting(showtitle) + Container.Content(tvshows)</visible>
 			</control>
@@ -43,6 +44,7 @@
 			
 			<control type="label">
 				<include>TitleModVars</include>
+				<posx>105</posx>
 				<align>center</align>
 				<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title]</label>
 				<visible>Skin.HasSetting(showtitle) + Container.Content(seasons) + !IsEmpty(ListItem.Title)</visible>
@@ -50,6 +52,7 @@
 					
 			<control type="label">
 				<include>TitleModVars</include>
+				<posx>105</posx>
 				<align>center</align>
 				<label>$INFO[ListItem.TVShowTitle] - $LOCALIZE[20366]</label>
 				<visible>Skin.HasSetting(showtitle) + Container.Content(seasons) + IsEmpty(ListItem.Title)</visible>
@@ -59,6 +62,7 @@
 			
 			<control type="label">
 				<include>TitleModVars</include>
+				<posx>105</posx>
 				<align>left</align>
 				<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]: $INFO[ListItem.Title]</label>
 				<visible>Skin.HasSetting(showtitle) + Container.Content(episodes)</visible>
@@ -66,7 +70,7 @@
 			
 			<control type="label">
 				<include>TitleModVars</include>
-				<posx>1070</posx>
+				<posx>1175</posx>
 				<align>right</align>
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<visible>Skin.HasSetting(showtitle) + Container.Content(episodes)</visible>

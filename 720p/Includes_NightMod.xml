@@ -3,6 +3,22 @@
 <!-- This are the extra includes for the night (& light) theme -->
 
 <!-- MULTIPLEX -->
+	
+	<!-- Watched Overlay (not used, because it's not working atm)
+	
+	<include name="WatchedOverlayMultiPlex">
+		<posx>70</posx>
+		<posy>128</posy>
+		<width>46</width>
+		<height>60</height>
+	</include>
+	
+	<include name="WatchedOverlayMultiPlexFocus">
+		<posx>80</posx>
+		<posy>138</posy>
+		<width>46</width>
+		<height>60</height>
+	</include> -->
 
 	<!-- Light -->
 	
