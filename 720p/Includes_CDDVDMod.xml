@@ -345,10 +345,10 @@
 		</include>
 	
 		<include name="MultiplexIconDimensionsTVWrapDVD">
-			<posx>8</posx>
-			<posy>3</posy>
-			<width>200</width>
-			<height>112</height>	
+			<posx>9</posx>
+			<posy>4</posy>
+			<width>198</width>
+			<height>110</height>	
 		</include>
 		
 		<include name="MultiplexIconDimensionsTVWrapReflectDVD">

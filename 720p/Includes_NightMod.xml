@@ -1,24 +1,56 @@
 <includes>
 
 <!-- This are the extra includes for the night (& light) theme -->
+	
+<!-- SHOWCASE -->
+	
+	<!-- Watched Overlay -->
+	
+	<include name="WatchedOverlayShowCaseNormal">
+		<posx>181</posx>
+		<posy>9</posy>
+		<width>40</width>
+		<height>40</height>
+	</include>
+	
+	<include name="WatchedOverlayShowCaseDVD">
+		<posx>181</posx>
+		<posy>30</posy>
+		<width>40</width>
+		<height>40</height>
+	</include>
 
 <!-- MULTIPLEX -->
 	
-	<!-- Watched Overlay (not used, because it's not working atm)
+	<!-- Watched Overlay -->
 	
-	<include name="WatchedOverlayMultiPlex">
-		<posx>70</posx>
-		<posy>128</posy>
-		<width>46</width>
-		<height>60</height>
+	<include name="WatchedOverlayMultiPlexNormal">
+		<posx>79</posx>
+		<posy>4</posy>
+		<width>32</width>
+		<height>32</height>
 	</include>
 	
-	<include name="WatchedOverlayMultiPlexFocus">
-		<posx>80</posx>
-		<posy>138</posy>
-		<width>46</width>
-		<height>60</height>
-	</include> -->
+	<include name="WatchedOverlayMultiPlexDVD">
+		<posx>79</posx>
+		<posy>9</posy>
+		<width>32</width>
+		<height>32</height>
+	</include>
+	
+	<include name="WatchedOverlayMultiPlexTVNormal">
+		<posx>174</posx>
+		<posy>2</posy>
+		<width>32</width>
+		<height>32</height>
+	</include>
+	
+	<include name="WatchedOverlayMultiPlexTVDVD">
+		<posx>174</posx>
+		<posy>4</posy>
+		<width>32</width>
+		<height>32</height>
+	</include>
 
 	<!-- Light -->
 	

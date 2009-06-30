@@ -684,6 +684,12 @@
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>			
 		</control> 
+		<control type="image">
+			<include>WatchedOverlayMultiPlexNormal</include>
+			<include>detailcolornofocus</include>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<info>ListItem.Overlay</info>
+		</control>
 	</include>
 	
 	<include name="MultiplexNormalCoversFocus">
@@ -717,6 +723,13 @@
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
 			<include>Animation_MultiplexFocusZoom</include>					
+		</control>
+		<control type="image">
+			<include>WatchedOverlayMultiPlexNormal</include>
+			<include>detailcolornofocus</include>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<info>ListItem.Overlay</info>
+			<include>Animation_MultiplexFocusZoom</include>
 		</control>
 	</include>
 	
@@ -757,6 +770,12 @@
 			<include>MultiplexIconDimensionsWrapReflectDVDCase</include>
 			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_maskreflect.png">multiplex/boxes/multiplex_glass.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+		<control type="image">
+			<include>WatchedOverlayMultiPlexDVD</include>
+			<include>detailcolornofocus</include>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<info>ListItem.Overlay</info>
 		</control>
 	</include>
 	
@@ -805,6 +824,13 @@
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
+		<control type="image">
+			<include>WatchedOverlayMultiPlexDVD</include>
+			<include>detailcolornofocus</include>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<info>ListItem.Overlay</info>
+			<include>Animation_MultiplexFocusZoomDVD</include>
+		</control>
 	</include>
 	
 	<!-- TV Shows -->
@@ -840,6 +866,12 @@
 			<texture flipy="true" diffuse="multiplex/multiplex_tvmaskreflect.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
+		</control>
+		<control type="image">
+			<include>WatchedOverlayMultiPlexTVNormal</include>
+			<include>detailcolornofocus</include>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<info>ListItem.Overlay</info>
 		</control>
 	</include>
 	
@@ -881,6 +913,13 @@
 			<info>ListItem.Icon</info>
 			<include>Animation_MultiplexTVFocusZoom</include>					
 		</control>
+		<control type="image">
+			<include>WatchedOverlayMultiPlexTVNormal</include>
+			<include>detailcolornofocus</include>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<info>ListItem.Overlay</info>
+			<include>Animation_MultiplexTVFocusZoom</include>	
+		</control>
 	</include>
 	
 	<include name="MultiplexTVCaseDVDNoFocus">	
@@ -915,6 +954,12 @@
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapReflectDVDCase</include>
 			<texture>multiplex/boxes/multiplex_tvglassreflect.png</texture>
+		</control>
+		<control type="image">
+			<include>WatchedOverlayMultiPlexTVDVD</include>
+			<include>detailcolornofocus</include>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<info>ListItem.Overlay</info>	
 		</control>
 	</include>
 	
@@ -956,6 +1001,13 @@
 			<include>MultiplexIconDimensionsTVWrapReflectDVDCase</include>
 			<texture>multiplex/boxes/multiplex_tvglassreflect.png</texture>
 			<include>Animation_MultiplexTVFocusZoom</include>
+		</control>
+		<control type="image">
+			<include>WatchedOverlayMultiPlexTVDVD</include>
+			<include>detailcolornofocus</include>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<info>ListItem.Overlay</info>
+			<include>Animation_MultiplexTVFocusZoom</include>	
 		</control>
 	</include>
 

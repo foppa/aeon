@@ -91,7 +91,19 @@
 	  <name>Font_WeatherTemp</name>
 	  <filename>aeon_title.ttf</filename>
 	  <size>55</size>
-	</font>		
+	</font>
+	  
+	<font>
+	  <name>Font_LatestAdditionsTiles</name>
+	  <filename>aeon_main_kr.ttf</filename>
+	  <size>18</size>
+	</font>
+		
+	<font>
+	  <name>Font_LatestAdditionsYear</name>
+	  <filename>aeon_main_kr.ttf</filename>
+	  <size>16</size>
+	</font>
 
 <!-- Media windows -->
 

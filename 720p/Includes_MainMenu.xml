@@ -39,6 +39,11 @@
 	<ondown>351</ondown>
 </include>
 
+<include name="LatestAdditions">
+	<onup>SetFocus(510)</onup>
+	<ondown>351</ondown>
+</include>
+
 <include name="MainMenu">
 
 	<control type="button" id="351">
@@ -72,7 +77,8 @@
 		<orientation>horizontal</orientation>
 		<focusposition>2</focusposition>
 		<scrolltime>200</scrolltime>
-		<include condition="!Skin.HasSetting(onetouch)">DownForSub</include>
+		<include condition="!Skin.HasSetting(onetouch) + !Skin.HasSetting(homelatest)">DownForSub</include>
+		<include condition="!Skin.HasSetting(onetouch) + Skin.HasSetting(homelatest)">LatestAdditions</include>
 		<include condition="Skin.HasSetting(onetouch)">PushForSub</include>		
 		<onfocus>SetFocus(299)</onfocus>
 		<animation type="WindowOpen" condition="!Skin.HasSetting(nozooms)" reversible="false">
