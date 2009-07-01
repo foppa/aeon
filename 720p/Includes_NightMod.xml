@@ -556,9 +556,9 @@
 	<!-- Light -->
 	
 	<include name="InfoRightPanelTopLight">
-		<posx>486</posx>
+		<posx>480</posx>
 		<posy>0</posy>
-		<width>795</width>
+		<width>800</width>
 		<height>720</height>
 		<texture>info/lite/info_rightpaneltop.png</texture>
 	</include>
@@ -566,7 +566,7 @@
 	<include name="InfoRightPanelTopOSDLight">
 		<posx>638</posx>
 		<posy>0</posy>
-		<width>772</width>
+		<width>800</width>
 		<height>720</height>
 		<texture>info/lite/info_rightpaneltop.png</texture>
 	</include>
