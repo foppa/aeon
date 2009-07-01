@@ -29,6 +29,7 @@
 	
 	<include name="groupVars">
 		<animation effect="slide" start="0,-20" end="0,-20" time="0" condition="!Skin.HasSetting(highertime)">Conditional</animation>
+		<animation effect="zoom" start="100" end="84" time="200" center="640,80" condition="Player.HasAudio + Skin.HasSetting(lowermainmenu)">Conditional</animation>
 		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 		<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -38,7 +39,6 @@
 	</include>
 	
 	<include name="labelTitle">
-		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 		<posy>13</posy>
 		<posx>12</posx>
 		<width>170</width>
@@ -50,7 +50,6 @@
 	</include>
 	
 	<include name="labelYear">
-		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 		<posy>36</posy>
 		<posx>12</posx>
 		<width>170</width>
@@ -62,7 +61,6 @@
 	</include>
 	
 	<include name="coverVars">
-		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 		<colordiffuse>EEFFFFFF</colordiffuse>
 		<posx>0</posx>
 		<posy>32</posy>
@@ -71,7 +69,6 @@
 	</include>
 	
 	<include name="coverVarsTV">
-		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 		<colordiffuse>EEFFFFFF</colordiffuse>
 		<posx>0</posx>
 		<posy>68</posy>
@@ -80,7 +77,6 @@
 	</include>
 	
 	<include name="coverVarsMusic">
-		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 		<colordiffuse>EEFFFFFF</colordiffuse>
 		<posx>0</posx>
 		<posy>66</posy>
@@ -114,7 +110,7 @@
 			<onright>510</onright>
 
 			<animation effect="slide" start="0,-20" end="0,-20" time="0" condition="!Skin.HasSetting(highertime)">Conditional</animation>
-			<animation effect="zoom" start="100" end="90" time="200" center="640,80" condition="Player.HasAudio + Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			<animation effect="zoom" start="100" end="84" time="200" center="640,80" condition="Player.HasAudio + Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 
@@ -313,7 +309,7 @@
 			<onright>510</onright>
 
 			<animation effect="slide" start="0,-20" end="0,-20" time="0" condition="!Skin.HasSetting(highertime)">Conditional</animation>
-			<animation effect="zoom" start="100" end="90" time="200" center="640,80" condition="Player.HasAudio + Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			<animation effect="zoom" start="100" end="84" time="200" center="640,80" condition="Player.HasAudio + Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 
@@ -512,7 +508,7 @@
 			<onright>510</onright>
 
 			<animation effect="slide" start="0,-20" end="0,-20" time="0" condition="!Skin.HasSetting(highertime)">Conditional</animation>
-			<animation effect="zoom" start="100" end="90" time="200" center="640,80" condition="Player.HasAudio + Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			<animation effect="zoom" start="100" end="84" time="200" center="640,80" condition="Player.HasAudio + Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 
