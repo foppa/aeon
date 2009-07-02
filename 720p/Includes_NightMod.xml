@@ -22,6 +22,25 @@
 
 <!-- MULTIPLEX -->
 	
+	<!-- Thick Back -->
+	
+	<include name="MultiplexThickBack">
+		<width>1130</width>
+		<height>564</height>
+		<texture>multiplex/multiplex_back.png</texture>
+		<visible>!Skin.HasSetting(multiplexthin)</visible>
+		<include>Animation_CommonFade</include>
+	</include>
+		
+	<include name="MultiplexThickBackTitleMod">
+		<posy>-11</posy>
+		<width>1130</width>
+		<height>576</height>
+		<texture>multiplex/multiplex_back_title.png</texture>
+		<visible>!Skin.HasSetting(multiplexthin)</visible>
+		<include>Animation_CommonFade</include>
+	</include>
+	
 	<!-- Watched Overlay -->
 	
 	<include name="WatchedOverlayMultiPlexNormal">
