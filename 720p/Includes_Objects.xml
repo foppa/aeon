@@ -488,7 +488,7 @@
 			<onclick>Skin.SetBool(multiplexbigthumb)</onclick>
 			<onclick>Skin.Reset(multiplexplot)</onclick>
 			<onclick>XBMC.ReloadSkin</onclick>
-			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(52) + ![Skin.HasSetting(multiplexbigthumb) | Skin.HasSetting(multiplexfanart)]</visible>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(52) + ![Skin.HasSetting(multiplexbigthumb) | Skin.HasSetting(multiplexfanart)] + ![Skin.HasSetting(multiplextrailer) | Skin.HasSetting(multiplexbigtrailer)]</visible>
 		</control>
 		
 		<control type="button" id="989">
@@ -503,10 +503,28 @@
 		<control type="button" id="990">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[31047]: $LOCALIZE[31044]</label>
-			<onclick>Skin.SetBool(multiplexplot)</onclick>
+			<onclick>Skin.SetBool(multiplextrailer)</onclick>
 			<onclick>Skin.Reset(multiplexfanart)</onclick>
 			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(52) + Skin.HasSetting(multiplexfanart)</visible>
+		</control>
+		
+		<control type="button" id="991">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31047]: $LOCALIZE[32000]</label>
+			<onclick>Skin.SetBool(multiplexbigtrailer)</onclick>
+			<onclick>Skin.Reset(multiplextrailer)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(52) + Skin.HasSetting(multiplextrailer)</visible>
+		</control>
+		
+		<control type="button" id="992">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31047]: $LOCALIZE[32001]</label>
+			<onclick>Skin.SetBool(multiplexplot)</onclick>
+			<onclick>Skin.Reset(multiplexbigtrailer)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(52) + Skin.HasSetting(multiplexbigtrailer)</visible>
 		</control>
 		
 		<control type="togglebutton" id="995">
@@ -516,7 +534,7 @@
 			<usealttexture>!Skin.HasSetting(multiplextvbigthumb)</usealttexture>
 			<onclick>Skin.ToggleSetting(multiplextvbigthumb)</onclick>
 			<visible>Container.Content(episodes) + Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52)</visible>
-		</control>		
+		</control>	
 	</include>
 
 	<include name="Objects_ViewtypeClick">

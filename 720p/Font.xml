@@ -356,6 +356,14 @@
     </font>	
 	
 <!-- Multiplex -->
+	  
+	<!-- Trailer Mod -->
+	  
+	<font>
+	  <name>Font_MultiplexTrailer</name>
+	  <filename>aeon_settings.ttf</filename>
+	  <size>21</size>
+	</font>
 
   	<!-- Title Mod -->
 

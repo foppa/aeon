@@ -21,8 +21,9 @@
 	<include name="TitleModMovies">
 		<control type="label">
 			<include>TitleModVars</include>
+			<posx>105</posx>
 			<align>center</align>
-			<label fallback="31425">$INFO[Container(52).ListItem.Title]</label>
+			<label>$INFO[ListItem.Title]</label>
 			<visible>Skin.HasSetting(showtitle)</visible>
 		</control>
 	</include>

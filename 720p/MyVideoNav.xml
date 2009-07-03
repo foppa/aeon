@@ -117,7 +117,7 @@
 				
 				<include>Objects_WallBackdropButton</include>
 
-				<control type="togglebutton" id="991">
+				<control type="togglebutton" id="993">
 					<include>Objects_MediaMenuButton</include>				
 					<label>$LOCALIZE[31066]: $LOCALIZE[31077]</label>
 					<altlabel>$LOCALIZE[31066]: $LOCALIZE[31078]</altlabel>
