@@ -823,7 +823,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexNormal</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
 			<info>ListItem.Overlay</info>
 		</control>
 	</include>
@@ -863,7 +863,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexNormal</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
 			<info>ListItem.Overlay</info>
 			<include>Animation_MultiplexFocusZoom</include>
 		</control>
@@ -910,7 +910,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexDVD</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
 			<info>ListItem.Overlay</info>
 		</control>
 	</include>
@@ -963,7 +963,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexDVD</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
 			<info>ListItem.Overlay</info>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
