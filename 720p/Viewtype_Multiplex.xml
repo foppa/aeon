@@ -380,31 +380,22 @@
 					<colordiffuse>94FFFFFF</colordiffuse>
 					<animation effect="fade" start="50" end="50" time="0" condition="!Skin.HasSetting(darkmultiplex)">Conditional</animation>					
 				</control>		
-				<control type="multiimage">
-					<posx>1</posx>
-					<posy>1</posy>
-					<width>453</width>
-					<height>254</height>
-					<aspectratio>scale</aspectratio>
-					<fadetime>400</fadetime>
-					<timeperimage>4000</timeperimage>					
-					<imagepath background="true">$INFO[Container(52).listitem.property(fanart_image)]</imagepath>
-					<visible>!Player.HasMedia</visible>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>1</posy>
-					<width>453</width>
-					<height>254</height>
-					<texture>common/black.png</texture>
-					<visible>Player.HasMedia</visible>				
-				</control>
 				<control type="videowindow" id="2">
       				<posx>1</posx>
 					<posy>1</posy>
 					<width>453</width>
 					<height>254</height>
-					<visible>[Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]] | VideoPlayer.Content(movies)</visible> 
+					<visible>[Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]] | VideoPlayer.Content(movies) + !VideoPlayer.Content(music)</visible> 
+				</control>
+				<control type="largeimage">
+					<posx>1</posx>
+					<posy>1</posy>
+					<width>453</width>
+					<height>254</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>				
+					<texture>$INFO[Container(52).listitem.property(fanart_image)]</texture>
+					<visible>!Player.HasVideo</visible>
 				</control>
 				<control type="image">
 					<posx>105</posx>
@@ -414,7 +405,7 @@
 					<height>32</height>
 					<texture>multiplex/multiplex_trailer_label.png</texture>
 					<visible>!IsEmpty(ListItem.Trailer) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible> 
-					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasMedia">Conditional</animation>		
+					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasVideo">Conditional</animation>		
 				</control>
 				<control type="label">
 					<posx>105</posx>
@@ -424,7 +415,7 @@
 					<height>32</height>
 					<font>Font_MultiplexTrailer</font>
 					<label>Press Down to see trailer</label>
-					<visible>!IsEmpty(ListItem.Trailer) + !Player.HasMedia + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
+					<visible>!IsEmpty(ListItem.Trailer) + !Player.HasVideo + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
 					<colordiffuse>d0FFFFFF</colordiffuse>
 					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
 				</control>
@@ -436,10 +427,10 @@
 					<height>32</height>
 					<font>Font_MultiplexTrailer</font>
 					<label>Press 'x' to stop</label>
-					<visible>!IsEmpty(ListItem.Trailer) + Player.HasMedia + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
+					<visible>!IsEmpty(ListItem.Trailer) + Player.HasVideo + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
 					<colordiffuse>d0FFFFFF</colordiffuse>
 					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
-					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasMedia">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasVideo">Conditional</animation>
 				</control>	
 			</control>
 
@@ -456,6 +447,13 @@
 					<colordiffuse>94FFFFFF</colordiffuse>
 					<animation effect="fade" start="50" end="50" time="0" condition="!Skin.HasSetting(darkmultiplex)">Conditional</animation>					
 				</control>				
+				<control type="videowindow" id="2">
+      				<posx>1</posx>
+					<posy>1</posy>
+					<width>593</width>
+					<height>333</height>
+					<visible>[Control.IsVisible(52) + Skin.HasSetting(multiplexbigtrailer) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]] | VideoPlayer.Content(movies)</visible> 
+				</control>
 				<control type="largeimage">
 					<posx>1</posx>
 					<posy>1</posy>
@@ -464,21 +462,7 @@
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
 					<texture>$INFO[Container(52).listitem.property(fanart_image)]</texture>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>1</posy>
-					<width>593</width>
-					<height>333</height>
-					<texture>common/black.png</texture>
-					<visible>Player.HasMedia + Skin.HasSetting(multiplexbigtrailer)</visible>				
-				</control>
-				<control type="videowindow" id="2">
-      				<posx>1</posx>
-					<posy>1</posy>
-					<width>593</width>
-					<height>333</height>
-					<visible>[Control.IsVisible(52) + Skin.HasSetting(multiplexbigtrailer) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]] | VideoPlayer.Content(movies)</visible> 
+					<visible>!Player.HasVideo</visible>
 				</control>
 				<control type="image">
 					<posx>177</posx>
@@ -488,7 +472,7 @@
 					<height>32</height>
 					<texture>multiplex/multiplex_trailer_label.png</texture>
 					<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(multiplexbigtrailer) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible> 
-					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasMedia">Conditional</animation>		
+					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasVideo">Conditional</animation>		
 				</control>
 				<control type="label">
 					<posx>177</posx>
@@ -498,7 +482,7 @@
 					<height>32</height>
 					<font>Font_MultiplexTrailer</font>
 					<label>Press Down to see trailer</label>
-					<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(multiplexbigtrailer) + !Player.HasMedia + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
+					<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(multiplexbigtrailer) + !Player.HasVideo + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
 					<colordiffuse>d0FFFFFF</colordiffuse>
 					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
 				</control>
@@ -510,10 +494,10 @@
 					<height>32</height>
 					<font>Font_MultiplexTrailer</font>
 					<label>Press 'x' to stop</label>
-					<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(multiplexbigtrailer) + Player.HasMedia + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
+					<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(multiplexbigtrailer) + Player.HasVideo + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
 					<colordiffuse>d0FFFFFF</colordiffuse>
 					<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
-					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasMedia">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" delay="5000" condition="Player.HasVideo">Conditional</animation>
 				</control>
 			</control>
 			
