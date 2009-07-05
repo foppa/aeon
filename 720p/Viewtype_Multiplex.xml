@@ -1240,7 +1240,7 @@
 					<width>185</width>
 					<height>60</height>
 					<align>center</align>
-					<label>EPISODE $INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+					<label>$LOCALIZE[31433] $INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
 					<font>Font_MultiplexInfoLabel</font>
 					<visible>Container.Content(episodes)</visible>
 				</control>
@@ -1250,7 +1250,7 @@
 					<width>185</width>
 					<height>60</height>
 					<align>center</align>
-					<label>SEASON $INFO[ListItem.Season]</label>
+					<label>$LOCALIZE[31432] $INFO[ListItem.Season]</label>
 					<font>Font_MultiplexInfoLabel</font>
 					<visible>Container.Content(seasons) + !IsEmpty(ListItem.Season)</visible>
 				</control>
@@ -1260,7 +1260,7 @@
 					<width>185</width>
 					<height>60</height>
 					<align>center</align>
-					<label>ALL SEASONS</label>
+					<label>$LOCALIZE[20366]</label>
 					<font>Font_MultiplexInfoLabel</font>
 					<visible>Container.Content(seasons) + IsEmpty(ListItem.Season)</visible>
 				</control>

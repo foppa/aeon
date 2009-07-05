@@ -47,7 +47,7 @@
 				<include>TitleModVars</include>
 				<posx>105</posx>
 				<align>center</align>
-				<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title]</label>
+				<label>$INFO[ListItem.TVShowTitle] - $LOCALIZE[31432] $INFO[ListItem.Season]</label>
 				<visible>Skin.HasSetting(showtitle) + Container.Content(seasons) + !IsEmpty(ListItem.Title)</visible>
 			</control>
 					
