@@ -8,7 +8,7 @@
 		<imagepath>backdrops/default_settings</imagepath>
 		<info>Skin.String(CustomSettings)</info>
 		<include>BackgroundTimings</include>
-		<animation effect="fade" start="0" end="100" time="200" condition="![Window.Previous(4) | Window.Previous(Home)]">WindowOpen</animation>
+		<animation effect="fade" start="0" end="100" time="200" condition="!Window.Previous(4) | Window.Previous(Home)]">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="200" condition="![Window.Next(4) | Window.Next(Home)]">WindowClose</animation>		
 	</control>
 

@@ -153,7 +153,14 @@
 			<label>Enable Latest Added</label>
 			<onclick>Skin.ToggleSetting(homelatest)</onclick>
 			<selected>Skin.HasSetting(homelatest)</selected>
-		</control>	
+		</control>
+		
+		<control type="radiobutton" id="505">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Weather Backdrop by Current Weather Conditions</label>
+			<onclick>Skin.ToggleSetting(CustomWeatherConditions)</onclick>
+			<selected>Skin.HasSetting(CustomWeatherConditions)</selected>
+		</control>
 		
 	</control>
 	

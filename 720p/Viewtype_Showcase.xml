@@ -96,7 +96,7 @@
     <include name="MovieShowcaseGlassOverlayAngled">
         <include condition="!Skin.HasSetting(dvdcase)">MovieShowcaseThumbDimensions</include>
         <include condition="Skin.HasSetting(dvdcase)">MovieShowcaseThumbDimensionsDVD</include>
-        <include condition="!Skin.HasSetting(dvdcase)">MoviePosterNormal</include>
+        <include condition="!Skin.HasSetting(dvdcase)">MoviePosterNormalNoEdge</include>
         <include condition="Skin.HasSetting(dvdcase)">MoviePosterDVD</include>
     </include>
 

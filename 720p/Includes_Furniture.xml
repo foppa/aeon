@@ -58,7 +58,7 @@
 			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[System.Date][/UPPERCASE]  |  [/COLOR][COLOR FFcdcdcd]$INFO[System.Time][/COLOR]</label>
 		</control>		
 	</include>
-	
+
 	<include name="Furniture_TimePanelHigh">
 		<control type="image">
 			<posx>40</posx>

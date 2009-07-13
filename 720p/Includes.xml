@@ -1,9 +1,11 @@
 <includes>
 
-<!-- New Include For Night, Title & CD/DVD Mod -->
+<!-- New Include For Night, Title, CD/DVD, MultiplexFlow & Wall Mod -->
 <include file="Includes_CDDVDMod.xml" />
+<include file="Includes_MultiplexFlow.xml" />
 <include file="Includes_NightMod.xml" />
 <include file="Includes_TitleMod.xml" />
+<include file="Includes_WallMod.xml" />
 	
 <!-- Latest added -->
 <include file="Includes_Latest_Added.xml" />

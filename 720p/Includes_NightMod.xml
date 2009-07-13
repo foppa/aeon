@@ -50,9 +50,23 @@
 		<height>32</height>
 	</include>
 	
+	<include name="WatchedOverlayMultiPlexNormalFlow">
+		<posx>153</posx>
+		<posy>102</posy>
+		<width>32</width>
+		<height>32</height>
+	</include>
+	
 	<include name="WatchedOverlayMultiPlexDVD">
 		<posx>79</posx>
 		<posy>9</posy>
+		<width>32</width>
+		<height>32</height>
+	</include>
+	
+	<include name="WatchedOverlayMultiPlexDVDFlow">
+		<posx>153</posx>
+		<posy>107</posy>
 		<width>32</width>
 		<height>32</height>
 	</include>

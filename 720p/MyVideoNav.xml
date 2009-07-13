@@ -18,14 +18,14 @@
 
 	<control type="largeimage" id="102">
 		<include>FullscreenDimensions</include>
-        <visible>[Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52)] + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image))</visible>
+        <visible>[Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52) | Control.IsVisible(53)] + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image))</visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 		<include>Animation_FanartFade</include>
 	</control>
 	
 	<include condition="Skin.HasSetting(videotv)">MediaBackdropsTVFanart</include>
-	<include>MediaBackdropsMultiplex</include>	
+	<!-- <include>MediaBackdropsMultiplex</include>	-->
 
 	<include>Furniture_WallBackground</include>
 	
@@ -78,9 +78,13 @@
 					<include>Objects_MediaMenuButton</include>
 				</control>
 
-				<include condition="!Skin.HasSetting(nomultiplexinfobuttons)">Objects_MultiplexInfoButtons</include>			
+				<include condition="!Skin.HasSetting(nomultiplexinfobuttons)">Objects_MultiplexInfoButtons</include>
+				
+				<include>Objects_WallInfoButtons</include>		
 				
 				<include condition="!Skin.HasSetting(nomultiplexstylebuttons)">Objects_MultiplexStyleButtons</include>
+				
+				<include condition="!Skin.HasSetting(nomultiplexstylebuttons)">Objects_MultiplexCoverStyleButtons</include>
 				
 				<control type="togglebutton" id="940">
 					<include>Objects_MediaMenuButton</include>				
@@ -99,7 +103,7 @@
 					<usealttexture>Skin.HasSetting(nomoviefanart)</usealttexture>
 					<onclick>Skin.SetBool(nomoviefanart)</onclick>
 					<altclick>Skin.Reset(nomoviefanart)</altclick>
-					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + [Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52)]</visible>
+					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + [Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52)| Control.IsVisible(53)]</visible>
 				</control>
 				
 				<control type="togglebutton" id="902">
@@ -166,6 +170,8 @@
 
 	<include condition="Skin.HasSetting(videomovies)">Furniture_ShowcaseMediaFlags</include>
 	<include condition="Skin.HasSetting(videotv)">Furniture_EpisodeMediaFlags</include>
+		
+	<include>Furniture_WallMediaFlags</include>
 	
 	<include>Furniture_DarkGradient</include>
 	<include>ViewChange</include>

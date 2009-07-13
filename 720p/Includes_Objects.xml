@@ -405,7 +405,20 @@
 			<onclick>Skin.ToggleSetting(nocurtains)</onclick>
 			<visible>Control.IsVisible(52)</visible>
 		</control>
-	</include>	
+	</include>
+
+	<!-- Multiplex Flat/Flow Layout Button -->
+	
+	<include name="Objects_MultiplexCoverStyleButtons">
+		<control type="togglebutton" id="998">
+			<include>Objects_MediaMenuButton</include>				
+			<label>COVER $LOCALIZE[31060]</label>
+			<altlabel>COVER $LOCALIZE[31061]</altlabel>
+			<usealttexture>Skin.HasSetting(multiplexflow)</usealttexture>
+			<onclick>Skin.ToggleSetting(multiplexflow)</onclick>
+			<visible>Skin.HasSetting(videomovies) + Control.IsVisible(52)</visible>
+		</control>
+	</include>
 	
 	<include name="Objects_MultiplexInfoButtons">
 		<control type="button" id="980">
@@ -535,6 +548,35 @@
 			<onclick>Skin.ToggleSetting(multiplextvbigthumb)</onclick>
 			<visible>Container.Content(episodes) + Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52)</visible>
 		</control>	
+	</include>
+	
+	<include name="Objects_WallInfoButtons">
+		<control type="button" id="1080">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(wallinfoon)</onclick>
+			<onclick>Skin.Reset(walleinfoauto)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(53) + ![Skin.HasSetting(wallinfoon) | Skin.HasSetting(wallinfooff)]</visible>
+		</control>
+		
+		<control type="button" id="1081">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(wallinfooff)</onclick>
+			<onclick>Skin.Reset(wallinfoon)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(53) + Skin.HasSetting(wallinfoon)</visible>
+		</control>
+
+		<control type="button" id="1082">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(wallinfoauto)</onclick>
+			<onclick>Skin.Reset(wallinfooff)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(53) + Skin.HasSetting(wallinfooff)</visible>
+		</control>
 	</include>
 
 	<include name="Objects_ViewtypeClick">

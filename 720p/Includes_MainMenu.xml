@@ -43,6 +43,12 @@
 	<onup>SetFocus(510)</onup>
 	<ondown>351</ondown>
 </include>
+	
+<!-- Weather Backdrop by Current Weather Conditions -->
+<include name="BackgroundVarsWeather2">
+	<thumb>$INFO[Skin.String(CustomWeather)]$INFO[Weather.FanartCode]</thumb>		
+</include>
+<!-- End -->
 
 <include name="MainMenu">
 
@@ -166,7 +172,8 @@
 			<item id="10">
 				<description>Weather</description>
 				<label>31017</label>
-				<include>BackgroundVarsWeather</include>					
+				<include condition="Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather2</include>
+				<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather</include>		
 				<onclick>xbmc.activatewindow(2600)</onclick>
 				<visible>Skin.HasSetting(weather)</visible>
 			</item>
@@ -497,7 +504,8 @@
 			</item>
 			<item id="10">
 				<label>31017</label>
-				<include>BackgroundVarsWeather</include>					
+				<include condition="Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather2</include>
+				<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather</include>				
 				<onclick>Skin.Reset(weather)</onclick>
 				<visible>Skin.HasSetting(weather)</visible>
 			</item>
