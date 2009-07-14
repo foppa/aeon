@@ -25,7 +25,7 @@
 	</control>
 	
 	<include condition="Skin.HasSetting(videotv)">MediaBackdropsTVFanart</include>
-	<!-- <include>MediaBackdropsMultiplex</include>	-->
+	<include>MediaBackdropsMultiplex</include>
 
 	<include>Furniture_WallBackground</include>
 	

@@ -999,44 +999,38 @@
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
 			<texture background="true" diffuse="multiplex/multiplex_tvmask.png">common/black.png</texture>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>				
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
 			<texture background="true" diffuse="multiplex/multiplex_tvmask.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
 			<bordertexture border="-10">multiplex/multiplex_tvborder.png</bordertexture>
 			<texture>common/blank.png</texture>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
 			<texture diffuse="multiplex/multiplex_tvmask.png">multiplex/multiplex_tvglass.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>				
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
 			<texture>common/blank.png</texture>
 			<colordiffuse>58FFFFFF</colordiffuse>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapReflect</include>
 			<texture background="true" flipy="true" diffuse="multiplex/multiplex_tvmaskreflect.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVNormal</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + !Skin.HasSetting(multiplexflow)</visible>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 			<info>ListItem.Overlay</info>
 		</control>
 	</include>
@@ -1045,52 +1039,45 @@
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
 			<texture background="true" diffuse="multiplex/multiplex_tvmask.png">common/black.png</texture>
-			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>						
+			<include>Animation_MultiplexTVFocusZoom</include>						
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
 			<texture background="true" diffuse="multiplex/multiplex_tvmask.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
-			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>					
+			<include>Animation_MultiplexTVFocusZoom</include>				
 		</control>							
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
 			<bordertexture border="-10">multiplex/multiplex_tvborder.png</bordertexture>
 			<texture>common/blank.png</texture>
-			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>					
+			<include>Animation_MultiplexTVFocusZoom</include>				
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
 			<texture diffuse="multiplex/multiplex_tvmask.png">multiplex/multiplex_tvglass.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>					
+			<include>Animation_MultiplexTVFocusZoom</include>				
 		</control>				
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrap</include>
 			<texture>common/blank.png</texture>
 			<colordiffuse>58FFFFFF</colordiffuse>
-			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>					
+			<include>Animation_MultiplexTVFocusZoom</include>				
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapReflect</include>
 			<texture background="true" flipy="true" diffuse="multiplex/multiplex_tvmaskreflect.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
-			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>					
+			<include>Animation_MultiplexTVFocusZoom</include>				
 		</control>
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVNormal</include>
 			<include>detailcolornofocus</include>
 			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + !Skin.HasSetting(multiplexflow)</visible>
-			<info>ListItem.Overlay</info>
-			<include>Animation_MultiplexTVFocusZoom</include>	
+			<info>ListItem.Overlay</info>	
 		</control>
 	</include>
 	
@@ -1098,46 +1085,39 @@
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapDVDCase</include>
 			<texture>multiplex/boxes/multiplex_tvborder.png</texture>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapDVD</include>
 			<texture background="true" diffuse="multiplex/boxes/multiplex_tvmask.png">common/black.png</texture>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>				
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapDVD</include>
 			<texture background="true" diffuse="multiplex/boxes/multiplex_tvmask.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapDVDCase</include>
 			<texture>multiplex/boxes/multiplex_tvglass.png</texture>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapReflectDVDCase</include>
 			<texture>multiplex/boxes/multiplex_tvborderreflect.png</texture>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapReflectDVD</include>
 			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_tvmaskreflect.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapReflectDVDCase</include>
 			<texture>multiplex/boxes/multiplex_tvglassreflect.png</texture>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVDVD</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + !Skin.HasSetting(multiplexflow)</visible>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 			<info>ListItem.Overlay</info>	
 		</control>
 	</include>
@@ -1147,51 +1127,44 @@
 			<include>MultiplexIconDimensionsTVWrapDVDCase</include>
 			<texture>multiplex/boxes/multiplex_tvborder.png</texture>
 			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapDVD</include>
 			<texture background="true" diffuse="multiplex/boxes/multiplex_tvmask.png">common/black.png</texture>
-			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>					
+			<include>Animation_MultiplexTVFocusZoom</include>				
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapDVD</include>
 			<texture background="true" diffuse="multiplex/boxes/multiplex_tvmask.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
-			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>					
+			<include>Animation_MultiplexTVFocusZoom</include>				
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapDVDCase</include>
 			<texture>multiplex/boxes/multiplex_tvglass.png</texture>
-			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>					
+			<include>Animation_MultiplexTVFocusZoom</include>					
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapReflectDVDCase</include>
 			<texture>multiplex/boxes/multiplex_tvborderreflect.png</texture>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapReflectDVD</include>
 			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_tvmaskreflect.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
-			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>					
+			<include>Animation_MultiplexTVFocusZoom</include>				
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsTVWrapReflectDVDCase</include>
 			<texture>multiplex/boxes/multiplex_tvglassreflect.png</texture>
 			<include>Animation_MultiplexTVFocusZoom</include>
-			<visible>!Skin.HasSetting(multiplexflow)</visible>
 		</control>
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVDVD</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + !Skin.HasSetting(multiplexflow)</visible>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 			<info>ListItem.Overlay</info>
 			<include>Animation_MultiplexTVFocusZoom</include>	
 		</control>
@@ -1238,8 +1211,8 @@
 		<include condition="Skin.HasSetting(videotv)">MultiplexInfoPaneTV</include>
 		
 		<control type="group">
-            <visible>Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1)</visible>
-            <include condition="Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)">MultiplexMoviesFlow</include>
+            <visible>Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1)]</visible>
+            <include condition="!Skin.HasSetting(videotv) + [Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)]">MultiplexMoviesFlow</include>
 			<include>Animation_HideMultiplex</include>
         </control>
 		
