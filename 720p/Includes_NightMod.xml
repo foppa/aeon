@@ -1,6 +1,25 @@
 <includes>
 
 <!-- This are the extra includes for the night (& light) theme -->
+
+<!-- WALL -->
+	
+	<!-- Watched Overlay -->
+	
+	<include name="WatchedOverlayWall">
+		<posx>87</posx>
+		<posy>8</posy>
+		<width>30</width>
+		<height>30</height>
+	</include>
+	
+	<include name="WatchedOverlayWallSmall">
+		<posx>68</posx>
+		<posy>6</posy>
+		<width>30</width>
+		<height>30</height>
+	</include>
+	
 	
 <!-- SHOWCASE -->
 	

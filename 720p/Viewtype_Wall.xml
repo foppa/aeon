@@ -342,19 +342,47 @@
 			<visible>Window.IsActive(28) | Window.IsActive(1) | Window.IsActive(24) | [Window.IsActive(25) + !Skin.HasSetting(videotv)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + Skin.HasSetting(unlockTVviews)]</visible>
 			<itemlayout width="123" height="179" condition="!Skin.HasSetting(smallmoviewall)">
 				<include condition="!Skin.HasSetting(dvdcase)">WallIconNormal</include>	
-				<include condition="Skin.HasSetting(dvdcase)">WallIconDVDFocus</include>	
+				<include condition="Skin.HasSetting(dvdcase)">WallIconDVDFocus</include>
+				<control type="image">
+					<include>WatchedOverlayWall</include>
+					<include>detailcolornofocus</include>
+					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+					<info>ListItem.Overlay</info>
+				</control>	
 			</itemlayout>
 			<focusedlayout width="123" height="179" condition="!Skin.HasSetting(smallmoviewall)">
 				<include condition="!Skin.HasSetting(dvdcase)">WallIconNormalFocus</include>
 				<include condition="Skin.HasSetting(dvdcase)">WallIconDVDFocus</include>
+				<control type="image">
+					<include>WatchedOverlayWall</include>
+					<include>detailcolornofocus</include>
+					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+					<info>ListItem.Overlay</info>
+					<include condition="!Skin.HasSetting(dvdcase)">WallIconZoomAnimation</include>
+					<include condition="Skin.HasSetting(dvdcase)">WallIconZoomAnimationDVD</include>
+				</control>	
 			</focusedlayout>
 			<itemlayout width="101" height="146" condition="Skin.HasSetting(smallmoviewall)">
 				<include condition="!Skin.HasSetting(dvdcase)">WallIconNormal</include>	
-				<include condition="Skin.HasSetting(dvdcase)">WallIconDVDFocus</include>			
+				<include condition="Skin.HasSetting(dvdcase)">WallIconDVDFocus</include>
+				<control type="image">
+					<include>WatchedOverlayWallSmall</include>
+					<include>detailcolornofocus</include>
+					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+					<info>ListItem.Overlay</info>
+				</control>				
 			</itemlayout>
 			<focusedlayout width="101" height="146" condition="Skin.HasSetting(smallmoviewall)">
 				<include condition="!Skin.HasSetting(dvdcase)">WallIconNormalFocus</include>
-				<include condition="Skin.HasSetting(dvdcase)">WallIconDVDFocus</include>					
+				<include condition="Skin.HasSetting(dvdcase)">WallIconDVDFocus</include>	
+				<control type="image">
+					<include>WatchedOverlayWallSmall</include>
+					<include>detailcolornofocus</include>
+					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+					<info>ListItem.Overlay</info>
+					<include condition="!Skin.HasSetting(dvdcase)">WallIconZoomAnimationSmall</include>
+					<include condition="Skin.HasSetting(dvdcase)">WallIconZoomAnimationDVDSmall</include>
+				</control>					
 			</focusedlayout>			
 		</control>	
 	</include>

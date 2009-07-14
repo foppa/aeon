@@ -1076,7 +1076,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVNormal</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + !Skin.HasSetting(multiplexflow)</visible>
+			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 			<info>ListItem.Overlay</info>	
 		</control>
 	</include>
