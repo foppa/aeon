@@ -301,6 +301,10 @@
 		<midtexture>dialogs/scan_fill.png</midtexture>
 	</include>
 	
+	<include name="SliderBackLight">
+		<texture>osd/osd_slider_dialog.png</texture>
+	</include>
+	
 	<include name="TextColorLight">
 		<textcolor>FF323232</textcolor>
 	</include>
@@ -313,6 +317,10 @@
 		
 	<include name="ScanFillNight">
 		<midtexture>dialogs/night/scan_fill.png</midtexture>
+	</include>
+	
+	<include name="SliderBackNight">
+		<texture>osd/night/osd_slider_dialog.png</texture>
 	</include>
 		
 	<include name="TextColorNight">

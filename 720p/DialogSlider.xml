@@ -1,0 +1,57 @@
+<window id="145"> 
+	<defaultcontrol>11</defaultcontrol> 
+	<animation effect="fade" time="200">WindowOpen</animation> 
+	<animation effect="fade" time="200">WindowClose</animation> 
+	<zorder>2</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<controls> 
+		<control type="group">
+			   
+			<include>Dialogs_Slider</include> 
+			<include>Dialogs_Tablet_Slider</include>
+	
+			<control type="label" id="10"> 
+				<description>Dialog header</description>
+				<posy>8</posy>
+				<posx>24</posx>
+				<include condition="!Skin.HasSetting(darkshowcase)">TextColorLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">TextColorNight</include> 
+				<font>Font_ProgressLabel</font>
+				<align>left</align>
+			</control>
+			
+			<control type="label" id="12"> 
+				<description>Slider Value</description> 
+				<posx>271</posx>
+				<posy>8</posy>
+				<width>268</width> 
+				<height>20</height> 
+				<include condition="!Skin.HasSetting(darkshowcase)">TextColorLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">TextColorNight</include> 
+				<font>Font_ProgressLabel</font>    
+				<align>right</align> 
+			</control>
+		
+			<control type="slider" id="11"> 
+				<description>Slider</description> 
+				<posy>21</posy> 
+				<posx>15</posx> 
+				<width>268</width>
+				<height>42</height> 
+				<align>center</align> 
+				<texturesliderbar>osd/osd_sliderback2.png</texturesliderbar> 
+				<textureslidernib>osd/osd_slidernub2.png</textureslidernib> 
+				<textureslidernibfocus>osd/osd_slidernubf2.png</textureslidernibfocus> 
+				<onup>11</onup> 
+				<ondown>11</ondown> 
+				<onleft>11</onleft> 
+				<onright>11</onright> 
+			</control>
+			
+		</control>
+	</controls> 
+</window>

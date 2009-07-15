@@ -1213,6 +1213,7 @@
 		<control type="group">
             <visible>Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1)]</visible>
             <include condition="!Skin.HasSetting(videotv) + [Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)]">MultiplexMoviesFlow</include>
+			<include condition="Skin.HasSetting(videotv) + [Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)]">MultiplexTVFlow</include>
 			<include>Animation_HideMultiplex</include>
         </control>
 		

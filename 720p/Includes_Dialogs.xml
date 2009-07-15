@@ -6,6 +6,13 @@
 		<width>509</width>
 		<height>91</height>	
 	</include>
+	
+	<include name="Dialogs_Slider">
+		<posx>506</posx>
+		<posy>620</posy>
+		<width>298</width>
+		<height>62</height>	
+	</include>
 
 	<include name="Dialogs_Tablet">
 		<control type="image">
@@ -15,6 +22,17 @@
 			<height>91</height>
 			<include condition="!Skin.HasSetting(darkshowcase)">ScanBackLight</include>
 			<include condition="Skin.HasSetting(darkshowcase)">ScanBackNight</include>		
+		</control>	
+	</include>
+	
+	<include name="Dialogs_Tablet_Slider">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>298</width>
+			<height>62</height>
+			<include condition="!Skin.HasSetting(darkshowcase)">SliderBackLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">SliderBackNight</include>		
 		</control>	
 	</include>
 
