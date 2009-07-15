@@ -316,7 +316,7 @@
 					<control type="image">
 						<include>WatchedOverlay</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						<info>ListItem.Overlay</info>
 					</control>				
 				</itemlayout>
@@ -426,7 +426,7 @@
 					<control type="image">
 						<include>WatchedOverlay</include>
 						<include>detailcolorfocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						<info>ListItem.Overlay</info>
 					</control>
 					
@@ -523,7 +523,7 @@
 					<control type="image">
 						<include>WatchedOverlay2</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						<info>ListItem.Overlay</info>
 					</control>
 				</itemlayout>
@@ -733,7 +733,7 @@
 					<control type="image">
 						<include>WatchedOverlay2</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						<info>ListItem.Overlay</info>
 					</control>
 					

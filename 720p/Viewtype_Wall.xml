@@ -346,7 +346,7 @@
 				<control type="image">
 					<include>WatchedOverlayWall</include>
 					<include>detailcolornofocus</include>
-					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+					<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					<info>ListItem.Overlay</info>
 				</control>	
 			</itemlayout>
@@ -356,7 +356,7 @@
 				<control type="image">
 					<include>WatchedOverlayWall</include>
 					<include>detailcolornofocus</include>
-					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+					<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					<info>ListItem.Overlay</info>
 					<include condition="!Skin.HasSetting(dvdcase)">WallIconZoomAnimation</include>
 					<include condition="Skin.HasSetting(dvdcase)">WallIconZoomAnimationDVD</include>
@@ -368,7 +368,7 @@
 				<control type="image">
 					<include>WatchedOverlayWallSmall</include>
 					<include>detailcolornofocus</include>
-					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+					<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					<info>ListItem.Overlay</info>
 				</control>				
 			</itemlayout>
@@ -378,7 +378,7 @@
 				<control type="image">
 					<include>WatchedOverlayWallSmall</include>
 					<include>detailcolornofocus</include>
-					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched)</visible>
+					<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					<info>ListItem.Overlay</info>
 					<include condition="!Skin.HasSetting(dvdcase)">WallIconZoomAnimationSmall</include>
 					<include condition="Skin.HasSetting(dvdcase)">WallIconZoomAnimationDVDSmall</include>

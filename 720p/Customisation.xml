@@ -103,13 +103,6 @@
 			<selected>Skin.HasSetting(showtitle)</selected>
 		</control>
 		
-		<control type="radiobutton" id="410">
-			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>ENABLE WATCHED OVERLAYS</label>
-			<onclick>Skin.ToggleSetting(watched)</onclick>
-			<selected>Skin.HasSetting(watched)</selected>
-		</control>	
-		
 	</control>
 
 	<control type="grouplist" id="11">

@@ -828,7 +828,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexNormal</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched) + !Skin.HasSetting(multiplexflow) + !Control.IsVisible(8000)</visible>
+			<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay) + !Skin.HasSetting(multiplexflow) + !Control.IsVisible(8000)</visible>
 			<info>ListItem.Overlay</info>
 		</control>
 	</include>
@@ -873,7 +873,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexNormal</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched) + !Skin.HasSetting(multiplexflow) + !Control.IsVisible(8000)</visible>
+			<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay) + !Skin.HasSetting(multiplexflow) + !Control.IsVisible(8000)</visible>
 			<info>ListItem.Overlay</info>
 			<include>Animation_MultiplexFocusZoom</include>
 		</control>
@@ -927,7 +927,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexDVD</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched) + !Skin.HasSetting(multiplexflow) + !Control.IsVisible(8000)</visible>
+			<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay) + !Skin.HasSetting(multiplexflow) + !Control.IsVisible(8000)</visible>
 			<info>ListItem.Overlay</info>
 		</control>
 	</include>
@@ -987,7 +987,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexDVD</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(watched) + !Skin.HasSetting(multiplexflow) + !Control.IsVisible(8000)</visible>
+			<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay) + !Skin.HasSetting(multiplexflow) + !Control.IsVisible(8000)</visible>
 			<info>ListItem.Overlay</info>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
@@ -1030,7 +1030,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVNormal</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 			<info>ListItem.Overlay</info>
 		</control>
 	</include>
@@ -1076,7 +1076,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVNormal</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 			<info>ListItem.Overlay</info>	
 		</control>
 	</include>
@@ -1117,7 +1117,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVDVD</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 			<info>ListItem.Overlay</info>	
 		</control>
 	</include>
@@ -1164,7 +1164,7 @@
 		<control type="image">
 			<include>WatchedOverlayMultiPlexTVDVD</include>
 			<include>detailcolornofocus</include>
-			<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			<visible>!Skin.HasSetting(notvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 			<info>ListItem.Overlay</info>
 			<include>Animation_MultiplexTVFocusZoom</include>	
 		</control>
@@ -1246,16 +1246,6 @@
 				<include condition="!Skin.HasSetting(dvdcase)">MultiplexTVCaseNormalNoFocus</include>
 				<include condition="Skin.HasSetting(dvdcase)">MultiplexTVCaseDVDNoFocus</include>	
 				<control type="image">
-					<posx>181</posx>
-					<posy>39</posy>
-					<width>48</width>
-					<height>52</height>
-					<info>ListItem.Overlay</info>
-					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
-					<include>Animation_VisibleChange200</include>
-					<visible>false</visible>
-				</control>
-				<control type="image">
 					<posx>14</posx>
 					<posy>92</posy>
 					<width>185</width>
@@ -1298,16 +1288,6 @@
 			<focusedlayout width="219" height="300" condition="Skin.HasSetting(videotv)">
 				<include condition="!Skin.HasSetting(dvdcase)">MultiplexTVCaseNormalFocus</include>
 				<include condition="Skin.HasSetting(dvdcase)">MultiplexTVCaseDVDFocus</include>
-				<control type="image">
-					<posx>181</posx>
-					<posy>39</posy>
-					<width>48</width>
-					<height>52</height>
-					<info>ListItem.Overlay</info>
-					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
-					<include>Animation_VisibleChange200</include>
-					<visible>false</visible>
-				</control>
 			</focusedlayout>
 		</control>
 		

@@ -1270,7 +1270,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-7).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-7).Overlay)</visible>
 						<info>ListItem(-7).Overlay</info>
 					</control>
                 </control>
@@ -1311,7 +1311,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-6).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-6).Overlay)</visible>
 						<info>ListItem(-6).Overlay</info>
 					</control>
                 </control>
@@ -1352,7 +1352,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-5).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-5).Overlay)</visible>
 						<info>ListItem(-5).Overlay</info>
 					</control>
                 </control>
@@ -1393,7 +1393,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-4).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-4).Overlay)</visible>
 						<info>ListItem(-4).Overlay</info>
 					</control>
                 </control>
@@ -1434,7 +1434,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-3).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-3).Overlay)</visible>
 						<info>ListItem(-3).Overlay</info>
 					</control>
                 </control>
@@ -1475,7 +1475,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-2).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-2).Overlay)</visible>
 						<info>ListItem(-2).Overlay</info>
 					</control>
                 </control>
@@ -1518,7 +1518,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(6).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(6).Overlay)</visible>
 						<info>ListItem(6).Overlay</info>
 					</control>
                 </control>
@@ -1559,7 +1559,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(5).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(5).Overlay)</visible>
 						<info>ListItem(5).Overlay</info>
 					</control>
                 </control>
@@ -1600,7 +1600,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(4).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(4).Overlay)</visible>
 						<info>ListItem(4).Overlay</info>
 					</control>
                 </control>
@@ -1641,7 +1641,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(3).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(3).Overlay)</visible>
 						<info>ListItem(3).Overlay</info>
 					</control>
                 </control>
@@ -1682,7 +1682,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(2).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(2).Overlay)</visible>
 						<info>ListItem(2).Overlay</info>
 					</control>
                 </control>
@@ -1723,7 +1723,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(1).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(1).Overlay)</visible>
 						<info>ListItem(1).Overlay</info>
 					</control>
                 </control>
@@ -1769,7 +1769,7 @@
 							<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 							<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 							<include>detailcolornofocus</include>
-							<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(watched)</visible>
+							<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay)</visible>
 							<info>ListItem(0).Overlay</info>
 						</control>
                     </control>
@@ -1811,7 +1811,7 @@
 							<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 							<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 							<include>detailcolornofocus</include>
-							<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-1).Overlay) + Skin.HasSetting(watched)</visible>
+							<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-1).Overlay)</visible>
 							<info>ListItem(-1).Overlay</info>
 						</control>
                     </control>
@@ -1861,7 +1861,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(7).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(7).Overlay)</visible>
 						<info>ListItem(7).Overlay</info>
 					</control>
                 </control>
@@ -1902,7 +1902,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(6).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(6).Overlay)</visible>
 						<info>ListItem(6).Overlay</info>
 					</control>
                 </control>
@@ -1943,7 +1943,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(5).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(5).Overlay)</visible>
 						<info>ListItem(5).Overlay</info>
 					</control>
                 </control>
@@ -1984,7 +1984,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(4).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(4).Overlay)</visible>
 						<info>ListItem(4).Overlay</info>
 					</control>
                 </control>
@@ -2025,7 +2025,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(3).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(3).Overlay)</visible>
 						<info>ListItem(3).Overlay</info>
 					</control>
                 </control>
@@ -2066,7 +2066,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(2).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(2).Overlay)</visible>
 						<info>ListItem(2).Overlay</info>
 					</control>
                 </control>
@@ -2109,7 +2109,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-6).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-6).Overlay)</visible>
 						<info>ListItem(-6).Overlay</info>
 					</control>
                 </control>
@@ -2150,7 +2150,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-5).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-5).Overlay)</visible>
 						<info>ListItem(-5).Overlay</info>
 					</control>
                 </control>
@@ -2191,7 +2191,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-4).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-4).Overlay)</visible>
 						<info>ListItem(-4).Overlay</info>
 					</control>
                 </control>
@@ -2232,7 +2232,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-3).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-3).Overlay)</visible>
 						<info>ListItem(-3).Overlay</info>
 					</control>
                 </control>
@@ -2273,7 +2273,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-2).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-2).Overlay)</visible>
 						<info>ListItem(-2).Overlay</info>
 					</control>
                 </control>
@@ -2314,7 +2314,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-1).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-1).Overlay)</visible>
 						<info>ListItem(-1).Overlay</info>
 					</control>
                 </control>
@@ -2360,7 +2360,7 @@
 							<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 							<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 							<include>detailcolornofocus</include>
-							<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(watched)</visible>
+							<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay)</visible>
 							<info>ListItem(0).Overlay</info>
 						</control>
                     </control>
@@ -2402,7 +2402,7 @@
 							<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 							<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 							<include>detailcolornofocus</include>
-							<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(1).Overlay) + Skin.HasSetting(watched)</visible>
+							<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(1).Overlay)</visible>
 							<info>ListItem(1).Overlay</info>
 						</control>
                     </control>
@@ -2460,7 +2460,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-6).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-6).Overlay)</visible>
 						<info>ListItem(-6).Overlay</info>
 					</control>
                 </control>
@@ -2505,7 +2505,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-5).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-5).Overlay)</visible>
 						<info>ListItem(-5).Overlay</info>
 					</control>
                 </control>
@@ -2550,7 +2550,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-4).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-4).Overlay)</visible>
 						<info>ListItem(-4).Overlay</info>
 					</control>
                 </control>
@@ -2595,7 +2595,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-3).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-3).Overlay)</visible>
 						<info>ListItem(-3).Overlay</info>
 					</control>
                 </control>
@@ -2640,7 +2640,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-2).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-2).Overlay)</visible>
 						<info>ListItem(-2).Overlay</info>
 					</control>
                 </control>
@@ -2685,7 +2685,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(-1).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(-1).Overlay)</visible>
 						<info>ListItem(-1).Overlay</info>
 					</control>
                 </control>
@@ -2730,7 +2730,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(6).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(6).Overlay)</visible>
 						<info>ListItem(6).Overlay</info>
 					</control>
                 </control>
@@ -2775,7 +2775,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(5).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(5).Overlay)</visible>
 						<info>ListItem(5).Overlay</info>
 					</control>
                 </control>
@@ -2820,7 +2820,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(4).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(4).Overlay)</visible>
 						<info>ListItem(4).Overlay</info>
 					</control>
                 </control>
@@ -2865,7 +2865,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(3).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(3).Overlay)</visible>
 						<info>ListItem(3).Overlay</info>
 					</control>
                 </control>
@@ -2910,7 +2910,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(2).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(2).Overlay)</visible>
 						<info>ListItem(2).Overlay</info>
 					</control>
                 </control>
@@ -2955,7 +2955,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(1).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(1).Overlay)</visible>
 						<info>ListItem(1).Overlay</info>
 					</control>
                 </control>
@@ -2995,7 +2995,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(watched)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay)</visible>
 						<info>ListItem(0).Overlay</info>
 					</control>
                 </control>
@@ -3131,14 +3131,14 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(watched) + !Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay) + !Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<info>ListItem(0).Overlay</info>
 					</control>
 					<control type="image">
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(watched) + Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<info>ListItem(0).Overlay</info>
 					</control>		
 				</itemlayout>
@@ -3203,7 +3203,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(watched) + !Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay) + !Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<info>ListItem(0).Overlay</info>
 						<animation effect="zoom" start="100" end="120" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="120" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>					
@@ -3212,7 +3212,7 @@
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseNormal</include>
 						<include condition="Skin.HasSetting(dvdcase)">WatchedOverlayShowCaseDVD</include>
 						<include>detailcolornofocus</include>
-						<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(watched) + Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
+						<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem(0).Overlay) + Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<info>ListItem(0).Overlay</info>
 						<animation effect="zoom" start="100" end="120" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="120" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>					
