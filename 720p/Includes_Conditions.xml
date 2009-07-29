@@ -31,10 +31,6 @@
 	<include name="Conditions_HiddenByInfoPages">
 		<visible>![Window.IsActive(2001) | Window.IsActive(2003)]</visible>
 	</include>
-
-	<include name="Conditions_ShowcaseIsVisible">
-		<visible>Control.IsVisible(57)</visible>
-	</include>
 	
 	<include name="Conditions_Weather">
 		<visible>Container(300).HasFocus(10) + !Skin.HasSetting(noweatherpopup)</visible>	

@@ -1,8 +1,9 @@
 <includes>
 
-<!-- New Include For Night, Title, CD/DVD, MultiplexFlow & Wall Mod -->
+<!-- New Include For Night, Title, CD/DVD, MultiplexFlow, Wall & Multiwall -->
 <include file="Includes_CDDVDMod.xml" />
 <include file="Includes_MultiplexFlow.xml" />
+<include file="Includes_Multiwall.xml" />
 <include file="Includes_NightMod.xml" />
 <include file="Includes_TitleMod.xml" />
 <include file="Includes_WallMod.xml" />
@@ -27,12 +28,11 @@
 <include file="Includes_MediaFlags.xml" />
 <include file="Includes_ViewSelect.xml" />
 <include file="Includes_Submenu.xml" />
-<include file="Viewtype_Showcase.xml" />
 <include file="Viewtype_StripShow.xml" />
 <include file="Viewtype_Multiplex.xml" />
-<include file="Viewtype_MultiplexOld.xml" />
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_Wall.xml" />
+<include file="Viewtype_Multiwall.xml" />
 
 <!-- Text colours ================================== -->
 

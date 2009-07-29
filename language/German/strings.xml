@@ -303,7 +303,7 @@
 	<string id="31405">BESETZUNG</string>
 	<string id="31406">EPISODEN</string>
 	<string id="31407">PREMIERE</string>
-	<string id="31408">IMDB</string>
+	<string id="31408">BEWERTUNG</string>
 	<string id="31409">TRAILER</string>
 	<string id="31410">NEU LADEN</string>
 	<string id="31411">ANSEHEN</string>
@@ -339,6 +339,10 @@
 	<string id="31442">LETZTE ÄNDERUNG NICHT VERFÜGBAR</string>
 	<string id="31443">AUFLÖSUNG NICHT VERFÜGBAR</string>
 	<string id="31444">DATEIGRÖSSE NICHT VERFÜGBAR</string>
+	<string id="31445">BANDGRÜNDUNG</string>
+	<string id="31446">KARRIERELÄNGE</string>
+	<string id="31447">INSTRUMENTE</string>
+	<string id="31448">LABEL</string>
 
 <!--  Aeon Assistant  -->
 
@@ -408,7 +412,7 @@
 	<string id="31706">VOR</string>
 	<string id="31707">LAUTSTÄKE</string>
 	<string id="31708">POSITION</string>
-	<string id="31709">ABGELAUFENE ZEIT</string>
+	<string id="31709">LAUFZEIT</string>
 	<string id="31710">GESAMT ZEIT</string>
 	<string id="31711">BOOKMARKS VERFÜGBAR</string>
 	<string id="31712">HOCH/RUNTER: MENÜ/BOOKMARKS[CR]LINKS/RECHTS: MENÜ OPTIONEN</string>

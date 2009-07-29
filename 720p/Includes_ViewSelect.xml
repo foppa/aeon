@@ -24,7 +24,7 @@
 			<effect type="fade" delay="400" start="0" end="100" time="400" />
 			<effect type="slide" delay="400" start="0,240" end="0,0" time="400" easing="out" tween="cubic" />
 		</animation>
-		<animation effect="fade" delay="500"start="100" end="0" time="400">Hidden</animation>		
+		<animation effect="fade" delay="500" start="100" end="0" time="400">Hidden</animation>		
 	</include>
 
 	<include name="ViewChangeAnimLeft">
@@ -74,7 +74,7 @@
 			<include condition="Window.IsActive(25)">MultiplexButton</include>			
 			<onleft>SetFocus(900)</onleft>
 			<ondown>Container.SetViewMode(53)</ondown>
-			<ondown>SetFocus(900)</ondown>		
+			<ondown>SetFocus(900)</ondown>
 		</control>
 
 		<control type="group">
@@ -100,14 +100,14 @@
 				<posy>493</posy>
 				<width>235</width>
 				<height>154</height>
-				<texture>viewselect/vs_icon_wall.png</texture>			
+				<texture>viewselect/vs_icon_wall.png</texture>
 			</control>			
 
 			<control type="label">
 				<include>ViewChangeLabel</include>
 				<posx>427</posx>
 				<posy>640</posy>
-				<label>31750</label>				
+				<label>31750</label>							
 			</control>			
 		</control>		
 		<control type="group">
@@ -151,13 +151,13 @@
 				<posy>277</posy>
 				<width>186</width>
 				<height>126</height>
-				<texture>viewselect/vs_icon_showcase.png</texture>				
+				<texture>viewselect/vs_icon_multiwall.png</texture>				
 			</control>
 			<control type="label">
 				<include>ViewChangeLabel</include>
 				<posx>854</posx>
 				<posy>400</posy>
-				<label>31751</label>
+				<label>31579</label>
 			</control>			
 		</control>		
 		

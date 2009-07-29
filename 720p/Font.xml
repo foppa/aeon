@@ -321,18 +321,12 @@
       <size>16</size>
     </font>
 
-<!-- Showcase -->
+<!-- Multiplex -->
 	
     <font>
-      <name>Font_ShowcaseMainLabel</name>
+      <name>Font_MultiplexMainLabelFont</name>
       <filename>aeon_list.ttf</filename>
       <size>22</size>
-    </font>
-	
-    <font>
-      <name>Font_ShowcaseDetailLabel</name>
-      <filename>aeon_list.ttf</filename>
-      <size>16</size>
     </font>
 
 <!-- StripShow -->
@@ -416,41 +410,7 @@
       <name>Font_MultiplexInfoValue</name>
       <filename>aeon_rss.ttf</filename>
       <size>16</size>
-    </font>	
-
-- <!--  Multiplex Old  --> 
-
-	<font>
-		<name>Font_MultiplexMainLabelOld</name> 
-		<filename>aeon_settings.ttf</filename> 
-		<size>55</size> 
-	</font>
-	<font>
-		<name>Font_MultiplexTVLabelOld</name> 
-		<filename>aeon_settings.ttf</filename> 
-		<size>55</size> 
-	</font>
-	<font>
-		<name>Font_MultiplexSeasonLabelOld</name> 
-		<filename>aeon_settings.ttf</filename> 
-		<size>31</size> 
-	</font>
-	<font>
-		<name>Font_MultiplexPlotOld</name> 
-		<filename>aeon_sublist_cy.ttf</filename> 
-		<size>19</size> 
-		<linespacing>1</linespacing> 
-	</font>
-	<font>
-		<name>Font_MultiplexInfoLabelOld</name> 
-		<filename>aeon_multiplex.ttf</filename> 
-		<size>16</size> 
-	</font>
-	<font>
-		<name>Font_MultiplexInfoValueOld</name> 
-		<filename>aeon_multiplex.ttf</filename> 
-		<size>17</size> 
-	</font>
+    </font>
 	
 <!-- Fullscreen Info pages -->
 
@@ -556,12 +516,24 @@
       <name>Font_WallInfoLabel</name>
       <filename>aeon_rss.ttf</filename>
       <size>12</size>
+    </font>
+	  
+	<font>
+      <name>Font_WallInfoLabelLow</name>
+      <filename>aeon_rss.ttf</filename>
+      <size>13</size>
     </font>	
 	
     <font>
       <name>Font_WallInfoValue</name>
       <filename>aeon_rss.ttf</filename>
       <size>13</size>
+    </font>
+	  
+	<font>
+      <name>Font_WallInfoValueLow</name>
+      <filename>aeon_rss.ttf</filename>
+      <size>14</size>
     </font>
 	  
 	<font>
@@ -572,10 +544,88 @@
     </font>
 	  
 	<font>
+      <name>Font_MultiWallArtistValue</name>
+      <filename>aeon_rss.ttf</filename>
+      <size>20</size>
+    </font>
+	  
+<!-- Multiwall -->
+	  
+	<font>
+      <name>Font_MultiWallPlot</name>
+      <filename>aeon_player.ttf</filename>
+      <size>16</size>
+	  <linespacing>1.28</linespacing>	  
+    </font>
+	  
+	<font>
+      <name>Font_MultiWallPlotTV</name>
+      <filename>aeon_player.ttf</filename>
+      <size>14</size>
+	  <linespacing>1.18</linespacing>	  
+    </font>
+	  
+	<font>
+      <name>Font_MultiWallPlotTVBig</name>
+      <filename>aeon_player.ttf</filename>
+      <size>17</size>
+	  <linespacing>1.25</linespacing>	  
+    </font>
+	  
+	<font>
 	  <name>Font_WallTitleMod</name>
 	  <filename>aeon_rss.ttf</filename>
 	  <size>17</size>
 	  <shadow>55000000</shadow>
+	</font>
+	  
+	<font>
+	  <name>Font_MultiWallTitleMod</name>
+	  <filename>aeon_rss.ttf</filename>
+	  <size>19</size>
+	  <shadow>55000000</shadow>
+	</font>
+	  
+	<font>
+      <name>Font_MultiwallInfoLabel</name>
+      <filename>aeon_rss.ttf</filename>
+      <size>14</size>
+    </font>
+	  
+	<font>
+      <name>Font_MultiwallInfoLabelTrailer</name>
+      <filename>aeon_rss.ttf</filename>
+      <size>11</size>
+    </font>
+	  
+	<font>
+      <name>Font_MultiwallSortLabel</name>
+      <filename>aeon_rss.ttf</filename>
+      <size>18</size>
+    </font>	
+	  
+	<font>
+	  <name>Font_MultiwallNowPlayingInfo</name>
+	  <filename>aeon_settings.ttf</filename>
+	  <size>14</size>
+	</font>
+	  
+	<font>
+	  <name>Font_MultiWallTrack</name>
+	  <filename>aeon_title.ttf</filename>
+	  <size>32</size>
+	</font>
+	 
+	<font>
+	  <name>Font_MultiWallDuration</name>
+	  <filename>aeon_title.ttf</filename>
+	  <size>12</size>
+	</font>
+	  
+	<font>
+	  <name>Font_MultiWallTitle</name>
+	  <filename>aeon_title.ttf</filename>
+	  <size>14</size>
 	</font>
 
 <!-- OSD -->
@@ -694,11 +744,7 @@
 	
   </fontset>
 
-				<!-- Fonts With Diacritical Signs-->
-
-
-
-
+<!-- Fonts With Diacritical Signs-->
 
   <fontset id="Aeon_Diacritical" unicode="true">
 
@@ -937,18 +983,12 @@
       <size>16</size>
     </font>
 
-<!-- Showcase -->
+<!-- Multiplex -->
 	
     <font>
-      <name>Font_ShowcaseMainLabel</name>
+      <name>Font_MultiplexMainLabelFont</name>
       <filename>aeon_list.ttf</filename>
       <size>22</size>
-    </font>
-	
-    <font>
-      <name>Font_ShowcaseDetailLabel</name>
-      <filename>aeon_list.ttf</filename>
-      <size>16</size>
     </font>
 	
 <!-- Fullscreen Info pages -->
@@ -1386,18 +1426,12 @@
       <size>16</size>
     </font>
 
-<!-- Showcase -->
+<!-- Multiplex -->
 	
     <font>
-      <name>Font_ShowcaseMainLabel</name>
+      <name>Font_MultiplexMainLabelFont</name>
       <filename>aeon_rss_kr.ttf</filename>
       <size>22</size>
-    </font>
-	
-    <font>
-      <name>Font_ShowcaseDetailLabel</name>
-      <filename>aeon_main_kr.ttf</filename>
-      <size>16</size>
     </font>
 	
 <!-- Fullscreen Info pages -->
@@ -1847,18 +1881,12 @@
       <size>16</size>
     </font>
 
-<!-- Showcase -->
+<!-- Multiplex -->
 	
     <font>
-      <name>Font_ShowcaseMainLabel</name>
+      <name>Font_MultiplexMainLabelFont</name>
       <filename>aeon_list_cy.ttf</filename>
       <size>22</size>
-    </font>
-	
-    <font>
-      <name>Font_ShowcaseDetailLabel</name>
-      <filename>aeon_list_cy.ttf</filename>
-      <size>16</size>
     </font>
 	
 <!-- Fullscreen Info pages -->
@@ -2308,18 +2336,12 @@
       <size>16</size>
     </font>
 
-<!-- Showcase -->
+<!-- Multiplex -->
 	
     <font>
-      <name>Font_ShowcaseMainLabel</name>
+      <name>Font_MultiplexMainLabelFont</name>
       <filename>aeon_list_ce.ttf</filename>
       <size>22</size>
-    </font>
-	
-    <font>
-      <name>Font_ShowcaseDetailLabel</name>
-      <filename>aeon_list_ce.ttf</filename>
-      <size>16</size>
     </font>
 	
 <!-- Fullscreen Info pages -->

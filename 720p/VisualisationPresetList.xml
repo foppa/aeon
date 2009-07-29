@@ -22,8 +22,7 @@
 		<posy>40</posy>
 		<width>881</width>
 		<height>481</height>
-		<include condition="!Skin.HasSetting(darkshowcase)">OSDSettingsBackLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">OSDSettingsBackNight</include>
+		<texture>osd/osd_settings_back.png</texture>
 	</control>
 
 	<control type="label" id="4">
@@ -65,8 +64,7 @@
 				<posy>0</posy>
 				<width>781</width>
 				<height>40</height>
-				<include condition="!Skin.HasSetting(darkshowcase)">OSDSettingsButtonNoFocusLight</include>
-				<include condition="Skin.HasSetting(darkshowcase)">OSDSettingsButtonNoFocusNight</include>
+				<texture>osd/osd_settings_buttonnf.png</texture>
 			</control>
 			<control type="label">
 				<posx>30</posx>
@@ -86,8 +84,7 @@
 				<posy>0</posy>
 				<width>781</width>
 				<height>40</height>
-				<include condition="!Skin.HasSetting(darkshowcase)">OSDSettingsButtonFocusLight</include>
-				<include condition="Skin.HasSetting(darkshowcase)">OSDSettingsButtonFocusNight</include>
+				<texture>osd/osd_settings_buttonf.png</texture>
 			</control>		
 			<control type="label">
 				<posx>30</posx>
@@ -111,8 +108,7 @@
 		<height>40</height>
 		<align>center</align>
 		<aligny>center</aligny>
-		<include condition="!Skin.HasSetting(darkshowcase)">OSDNumItemsColorLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">OSDNumItemsColorNight</include>		
+		<textcolor>FF929191</textcolor>		
 		<label>$LOCALIZE[31005] $INFO[Container(2).NumItems]</label>
 		<font>Font_OSDOptions</font>
 	</control>	

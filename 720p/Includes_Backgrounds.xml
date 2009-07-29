@@ -187,6 +187,16 @@
 			<include>BackgroundVarsTV</include>
 		</control>
 	</include>
+	
+	<include name="MediaBackdropsMovieFanart">
+		<control type="largeimage">
+			<include>FullscreenDimensions</include>
+			<visible>[Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52) | Control.IsVisible(53)] + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image))</visible>
+			<fadetime>400</fadetime>
+			<texture>$INFO[listitem.property(fanart_image)]</texture>
+			<include>Animation_FanartFade</include>
+		</control>
+	</include>
 
 	<include name="MediaBackdropsTVFanart">
 		<control type="largeimage">

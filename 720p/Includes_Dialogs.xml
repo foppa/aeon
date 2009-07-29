@@ -20,8 +20,7 @@
 			<posy>0</posy>
 			<width>509</width>
 			<height>91</height>
-			<include condition="!Skin.HasSetting(darkshowcase)">ScanBackLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ScanBackNight</include>		
+			<texture>dialogs/scan_backg.png</texture>	
 		</control>	
 	</include>
 	
@@ -31,8 +30,7 @@
 			<posy>0</posy>
 			<width>298</width>
 			<height>62</height>
-			<include condition="!Skin.HasSetting(darkshowcase)">SliderBackLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">SliderBackNight</include>		
+			<texture>osd/osd_slider_dialog.png</texture>		
 		</control>	
 	</include>
 
@@ -75,8 +73,7 @@
 		<reveal>true</reveal>
 		<texturebg>dialogs/scan_blank.png</texturebg>
 		<lefttexture>common/blank.png</lefttexture>
-		<include condition="!Skin.HasSetting(darkshowcase)">ScanFillLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">ScanFillNight</include>
+		<midtexture>dialogs/scan_fill.png</midtexture>
 		<righttexture>common/blank.png</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</include>
@@ -85,8 +82,7 @@
 		<posx>105</posx>
 		<width>390</width>
 		<height>21</height>
-		<include condition="!Skin.HasSetting(darkshowcase)">TextColorLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">TextColorNight</include>
+		<textcolor>FF818181</textcolor>
 		<align>left</align>
 		<font>Font_ProgressLabel</font>		
 	</include>

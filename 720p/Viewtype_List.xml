@@ -197,8 +197,7 @@
 			<include condition="!Skin.HasSetting(dvdcase)">ListSpotXPosNormal</include>
 			<include condition="Skin.HasSetting(dvdcase)">ListSpotXPosDVD</include>
 			<posy>583</posy>
-			<include condition="!Skin.HasSetting(darkshowcase)">ListSpotLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ListSpotNight</include>
+			<texture>list/list_spot.png</texture>
 			<visible>Control.IsVisible(50)</visible>				
 		</control>
 	
@@ -220,8 +219,7 @@
 				<posy>73</posy>
 				<width>759</width>
 				<height>647</height>
-				<include condition="!Skin.HasSetting(darkshowcase)">ListLight</include>
-				<include condition="Skin.HasSetting(darkshowcase)">ListNight</include>
+				<texture>list/listpanel_back.png</texture>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 
@@ -274,8 +272,7 @@
 						<posy>39</posy>
 						<height>1</height>
 						<width>739</width>
-						<include condition="!Skin.HasSetting(darkshowcase)">ListLineLight</include>
-						<include condition="Skin.HasSetting(darkshowcase)">ListLineNight</include>
+						<texture>list/listpanel_line.png</texture>
 					</control>			
 					<control type="label">
 						<include>ListLabel_TrackSmall</include>
@@ -293,7 +290,13 @@
 						<include>ListLabel_MainSmall</include>
 						<include>listcolornofocus</include>
 						<info>ListItem.Label</info>
-						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
+						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Label</info>
+						<visible>Window.IsActive(502) + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_MainSmall</include>
@@ -305,7 +308,7 @@
 						<include>ListLabel_DetailSmall</include>
 						<include>detailcolornofocus</include>
 						<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
-						<visible>Container.Content(movies)</visible>
+						<visible>Container.Content(movies) | Container.Content(albums)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_DetailSmall</include>
@@ -326,8 +329,7 @@
 						<posy>39</posy>
 						<height>1</height>
 						<width>739</width>
-						<include condition="!Skin.HasSetting(darkshowcase)">ListLineLight</include>
-						<include condition="Skin.HasSetting(darkshowcase)">ListLineNight</include>
+						<texture>list/listpanel_line.png</texture>
 					</control>	
 					<control type="image">
 						<posx>8</posx>
@@ -357,7 +359,14 @@
 						<include>listcolornofocus</include>
 						<info>ListItem.Label</info>
 						<include>Animation_ButtonFocusFade_fix</include>						
-						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
+						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<include>Animation_ButtonFocusFade_fix</include>
+						<info>ListItem.Label</info>
+						<visible>Window.IsActive(502) + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_MainSmall</include>
@@ -371,7 +380,7 @@
 						<include>detailcolornofocus</include>
 						<include>Animation_ButtonFocusFade_fix</include>						
 						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>				
-						<visible>!Control.IsVisible(76) + Container.Content(movies)</visible>
+						<visible>!Control.IsVisible(76) + [Container.Content(movies) |  | Container.Content(albums)]</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_DetailSmall</include>
@@ -400,7 +409,14 @@
 						<include>listcolorfocus</include>
 						<info>ListItem.Label</info>
 						<include>Animation_ButtonFocusFade</include>						
-						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
+						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolorfocus</include>
+						<include>Animation_ButtonFocusFade</include>
+						<info>ListItem.Label</info>
+						<visible>Window.IsActive(502) + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_MainSmall</include>
@@ -414,7 +430,7 @@
 						<include>detailcolorfocus</include>
 						<include>Animation_ButtonFocusFade</include>						
 						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>				
-						<visible>!Control.IsVisible(76) + Container.Content(movies)</visible>
+						<visible>!Control.IsVisible(76) + [Container.Content(movies) | Container.Content(albums)]</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_DetailSmall</include>
@@ -437,8 +453,7 @@
 						<posy>64</posy>
 						<height>1</height>
 						<width>739</width>
-						<include condition="!Skin.HasSetting(darkshowcase)">ListLineLight</include>
-						<include condition="Skin.HasSetting(darkshowcase)">ListLineNight</include>
+						<texture>list/listpanel_line.png</texture>
 					</control>
 					<control type="label">
 						<include>ListLabel_Track</include>
@@ -533,8 +548,7 @@
 						<posy>64</posy>
 						<height>1</height>
 						<width>739</width>
-						<include condition="!Skin.HasSetting(darkshowcase)">ListLineLight</include>
-						<include condition="Skin.HasSetting(darkshowcase)">ListLineNight</include>
+						<texture>list/listpanel_line.png</texture>
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -744,8 +758,7 @@
 						<posy>84</posy>
 						<height>1</height>
 						<width>739</width>
-						<include condition="!Skin.HasSetting(darkshowcase)">ListLineLight</include>
-						<include condition="Skin.HasSetting(darkshowcase)">ListLineNight</include>
+						<texture>list/listpanel_line.png</texture>
 					</control>
 					<control type="label">
 						<include>ListLabel_TrackSmall</include>
@@ -826,8 +839,7 @@
 						<posy>84</posy>
 						<height>1</height>
 						<width>739</width>
-						<include condition="!Skin.HasSetting(darkshowcase)">ListLineLight</include>
-						<include condition="Skin.HasSetting(darkshowcase)">ListLineNight</include>
+						<texture>list/listpanel_line.png</texture>
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -1208,8 +1220,28 @@
 		<include>Furniture_ListMediaFlags</include>
 	</control>
 	
-	<include condition="!Skin.HasSetting(darkshowcase)">ListScrollBarLight</include>
-	<include condition="Skin.HasSetting(darkshowcase)">ListScrollBarNight</include>
+	<control type="scrollbar" id="61">
+		<description>My first scroll bar control</description>
+		<posx>-45</posx>
+		<posy>108</posy>
+		<width>65</width>
+		<height>545</height>
+		<visible allowhiddenfocus="false">Control.IsVisible(50)</visible>
+		<texturesliderbackground>windows/scrollbarbacklist.png</texturesliderbackground>
+		<texturesliderbar>-</texturesliderbar>
+		<texturesliderbarfocus>-</texturesliderbarfocus>
+		<textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
+		<textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
+		<pulseonselect></pulseonselect>
+		<orientation>vertical</orientation>
+		<showonepage>false</showonepage>
+		<onup>61</onup>
+		<ondown>61</ondown>
+		<onleft>7000</onleft>
+		<onright>50</onright>
+		<include>Animation_CommonFade</include>
+		<animation effect="slide" start="0,0" end="46,0" time="200">Focus</animation>
+	</control>
 	
 	<control type="label" id="217">
 		<posx>0</posx>

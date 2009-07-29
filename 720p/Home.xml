@@ -34,7 +34,8 @@
 		<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
 	</control>
 	
-	<include>Furniture_HomeNowPlaying</include>
+	<include>MultiWallNowPlayingInfo</include>
+	<!-- <include>Furniture_HomeNowPlaying</include> -->
 	<include>Objects_WeatherPopup</include>
 	<include>Furniture_Time</include>
 	<include>latest_added</include>
@@ -77,12 +78,10 @@
 			<texture>home/homemenu_gradient.png</texture>
 			<include>Animation_CommonFade</include>
 			<visible>!Skin.HasSetting(nohomegradient)</visible>
-			<colordiffuse>d0FFFFFF</colordiffuse>
 		</control>		
 
 	</control>
 
-	<!--<include>Background_ContextBlack</include>-->
 	<include>Furniture_Debug</include>
 	
 	</controls>

@@ -11,17 +11,20 @@
 	
 	<control type="group">
 	
-		<!-- Night & Light Sizes -->
+		<posx>209</posx>
+		<posy>209</posy>
+		<width>862</width>
+		<height>316</height>
 	
-		<include condition="!Skin.HasSetting(darkshowcase)">ContentSizesLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">ContentSizesNight</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>862</width>
+			<height>316</height>
+			<texture>dialogs/setcontent_back.png</texture>
+		</control>
 		
 		<visible>!Window.IsActive(10140)</visible>
-		
-		<!-- Light & Night Background Image -->
-		
-		<include condition="!Skin.HasSetting(darkshowcase)">ContentBackLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">ContentBackNight</include>
 			
 		<control type="label" id="1000">
 			<description>directory contains label</description>
@@ -29,8 +32,7 @@
 			<posy>35</posy>
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentSpinControlLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentSpinControlNight</include>
+			<include>ContentSpinControl</include>
 			<aligny>center</aligny>
 			<font>Font_ContextMenuButton</font>
 			<label>31220</label>
@@ -43,8 +45,7 @@
 			<posy>35</posy>
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentSpinControlLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentSpinControlNight</include>
+			<include>ContentSpinControl</include>
 			<aligny>center</aligny>
 			<font>Font_ContextMenuButton</font>
 			<label>31220</label>
@@ -54,8 +55,7 @@
 		<control type="spincontrolex" id="3">
 			<description>directory content select spincontrol</description>
 			<font>Font_ContextMenuButton</font>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentSpinControlLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentSpinControlNight</include>
+			<include>ContentSpinControl</include>
 			<textureup>settings/spin-up.png</textureup>
 			<texturedown>settings/spin-down.png</texturedown>
 			<textureupfocus>settings/spin-up-focus.png</textureupfocus>
@@ -73,8 +73,7 @@
 		</control>
 
 		<control type="list" id="4">
-			<include condition="!Skin.HasSetting(darkshowcase)">ScraperPositionLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ScraperPositionNight</include>
+			<posx>520</posx>
 			<posy>35</posy>
 			<width>174</width>
 			<height>246</height>
@@ -89,16 +88,15 @@
 					<posy>0</posy>
 					<width>174</width>
 					<height>41</height>
-					<include condition="!Skin.HasSetting(darkshowcase)">ScraperNoFocusLight</include>
-					<include condition="Skin.HasSetting(darkshowcase)">ScraperNoFocusNight</include>
+					<texture>dialogs/setcontent_scraper_nofocus.png</texture>
 				</control>
 				<control type="label">
 					<posx>87</posx>
 					<posy>0</posy>
 					<width>174</width>
 					<height>41</height>
-					<include condition="!Skin.HasSetting(darkshowcase)">ScraperNoFocusTextColorLight</include>
-					<include condition="Skin.HasSetting(darkshowcase)">ScraperNoFocusTextColorNight</include>
+					<textcolor>FF303030</textcolor>
+					<selectedcolor>9b3cd2fd</selectedcolor>
 					<aligny>center</aligny>
 					<font>Font_SetContentList</font>
 					<align>center</align>
@@ -111,16 +109,15 @@
 					<posy>0</posy>
 					<width>174</width>
 					<height>41</height>
-					<include condition="!Skin.HasSetting(darkshowcase)">ScraperFocusLight</include>
-					<include condition="Skin.HasSetting(darkshowcase)">ScraperFocusNight</include>
+					<texture>dialogs/setcontent_scraper_focus.png</texture>
 				</control>
 				<control type="label">
 					<posx>87</posx>
 					<posy>0</posy>
 					<width>174</width>
 					<height>41</height>
-					<include condition="!Skin.HasSetting(darkshowcase)">ScraperFocusTextColorLight</include>
-					<include condition="Skin.HasSetting(darkshowcase)">ScraperFocusTextColorNight</include>
+					<textcolor>FFd8d8d8</textcolor>
+					<selectedcolor>FF3cd2fd</selectedcolor>
 					<aligny>center</aligny>
 					<font>Font_SetContentList</font>
 					<align>center</align>
@@ -131,8 +128,10 @@
 
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentGroupListSizesLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentGroupListSizesNight</include>
+			<posx>12</posx>
+			<posy>76</posy>
+			<width>508</width>
+			<height>205</height>
 			<itemgap>0</itemgap>
 			<onup>3</onup>
 			<ondown>3</ondown>
@@ -156,8 +155,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<font>Font_ContextMenuButton</font>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentRadioButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentRadioButtonNight</include>
+			<include>ContentRadioButton</include>
 			<pulseonselect>true</pulseonselect>
 			<radiowidth>94</radiowidth>
 			<radioposx>420</radioposx>
@@ -182,8 +180,7 @@
 			<onup>28</onup>
 			<ondown>29</ondown>
 			<texturenofocus>-</texturenofocus>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentButtonNight</include>
+			<include>ContentButton</include>
 		</control>
 	
 		<control type="button" id="28">
@@ -199,8 +196,7 @@
 			<onup>29</onup>
 			<ondown>6</ondown>
 			<texturenofocus>-</texturenofocus>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentButtonNight</include>
+			<include>ContentButton</include>
 		</control>
 
 		<control type="button" id="29">
@@ -216,20 +212,9 @@
 			<onup>6</onup>
 			<ondown>28</ondown>
 			<texturenofocus>-</texturenofocus>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentButtonNight</include>
+			<include>ContentButton</include>
 		</control>
-
-		<control type="image">
-			<description>foreground image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>869</width>
-			<height>317</height>
-			<texture>dialogs/setcontent_front.png</texture>
-			<visible>!Skin.HasSetting(darkshowcase)</visible>
-		</control>
-	
+			
 	</control>
 		
 	</controls>

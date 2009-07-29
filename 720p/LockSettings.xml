@@ -11,15 +11,18 @@
 	
 	<control type="group">
 		
-		<!-- Night & Light Sizes -->
+		<posx>209</posx>
+		<posy>209</posy>
+		<width>862</width>
+		<height>316</height>
 	
-		<include condition="!Skin.HasSetting(darkshowcase)">ContentSizesLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">ContentSizesNight</include>
-	
-		<!-- Light & Night Background Image -->
-		
-		<include condition="!Skin.HasSetting(darkshowcase)">LockSettingsBackLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">LockSettingsBackNight</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>862</width>
+			<height>316</height>
+			<texture>dialogs/scrapersettings_back.png</texture>
+		</control>
 		
 		<control type="label" id="2">
 			<description>Settings Label</description>
@@ -55,8 +58,10 @@
 		
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<include condition="!Skin.HasSetting(darkshowcase)">LockSettingsControlAreaSizesLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">LockSettingsControlAreaSizesNight</include>
+			<posx>13</posx>
+			<posy>35</posy>
+			<width>681</width>
+			<height>251</height>
 			<itemgap>0</itemgap>
 			<onup>5</onup>
 			<ondown>5</ondown>
@@ -68,13 +73,11 @@
 			<font>Font_ContextMenuButton</font>		
 			<textoffsetx>20</textoffsetx>
 			<aligny>center</aligny>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentRadioButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentRadioButtonNight</include>
+			<include>ContentRadioButton</include>
 		</control>
 		<control type="radiobutton" id="8">
 			<font>Font_ContextMenuButton</font>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentRadioButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentRadioButtonNight</include>
+			<include>ContentRadioButton</include>
 			<pulseonselect>false</pulseonselect>
 			<radiowidth>94</radiowidth>
 			<radioposx>595</radioposx>
@@ -92,8 +95,7 @@
 			<texturedown>settings/spin-down.png</texturedown>
 			<textureupfocus>settings/spin-up-focus.png</textureupfocus>
 			<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentSpinControlLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentSpinControlNight</include>
+			<include>ContentSpinControl</include>
 			<pulseonselect>false</pulseonselect>
 			<spinwidth>40</spinwidth>
 			<spinheight>65</spinheight>
@@ -125,48 +127,37 @@
 			<height>5</height>
 			<texture>separatorOSD.png</texture>
 		</control>
-		<control type="group" id="9001">		
-		<control type="button" id="28">
-			<description>ok button</description>
-			<posy>240</posy>
-			<height>41</height>
-			<font>Font_SetContentMenu</font>
-			<label>186</label>
-			<align>left</align>
-			<textoffsetx>20</textoffsetx>
-			<onleft>5</onleft>
-			<onright>5</onright>
-			<onup>29</onup>
-			<ondown>29</ondown>
-			<texturenofocus>-</texturenofocus>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentButtonNight</include>
-		</control>
-		<control type="button" id="29">
-			<description>cancel button</description>
-			<posy>199</posy>
-			<height>41</height>
-			<font>Font_SetContentMenu</font>
-			<label>222</label>
-			<align>left</align>
-			<textoffsetx>20</textoffsetx>
-			<onleft>5</onleft>
-			<onright>5</onright>
-			<onup>28</onup>
-			<ondown>28</ondown>
-			<texturenofocus>-</texturenofocus>
-			<include condition="!Skin.HasSetting(darkshowcase)">ContentButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ContentButtonNight</include>
-		</control>
-		</control>	
-		<control type="image">
-			<description>foreground image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>869</width>
-			<height>317</height>
-			<texture>dialogs/setcontent_front.png</texture>
-			<visible>!Skin.HasSetting(darkshowcase)</visible>
+		<control type="group" id="9001">	
+			<control type="button" id="28">
+				<description>ok button</description>
+				<posy>240</posy>
+				<height>41</height>
+				<font>Font_SetContentMenu</font>
+				<label>186</label>
+				<align>left</align>
+				<textoffsetx>20</textoffsetx>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>29</onup>
+				<ondown>29</ondown>
+				<texturenofocus>-</texturenofocus>
+				<include>ContentButton</include>
+			</control>
+			<control type="button" id="29">
+				<description>cancel button</description>
+				<posy>199</posy>
+				<height>41</height>
+				<font>Font_SetContentMenu</font>
+				<label>222</label>
+				<align>left</align>
+				<textoffsetx>20</textoffsetx>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>28</onup>
+				<ondown>28</ondown>
+				<texturenofocus>-</texturenofocus>
+				<include>ContentButton</include>
+			</control>
 		</control>	
 		
 	</control>

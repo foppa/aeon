@@ -28,8 +28,8 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>288</height>
-			<include condition="!Skin.HasSetting(darkshowcase)">ProfileSettingsBackLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ProfileSettingsBackNight</include>
+			<width>848</width>
+			<texture>dialogs/profilesettings_back.png</texture>
 		</control>
 
 		<control type="image" id="2">
@@ -42,59 +42,6 @@
 			<texture>unknown-user.png</texture>
 			<colordiffuse>d0FFFFFF</colordiffuse>
 		</control>
-
-		<!-- <control type="label" id="0">
-			<description>Profile Name</description>
-			<posx>180</posx>
-			<posy>116</posy>
-			<width>280</width>
-			<align>left</align>
-			<font>special13</font>
-			<textcolor>DDced8da</textcolor>
-			<label>$LOCALIZE[ 20093 ]</label>
-		</control>
-  
-		<control type="label" id="1000">
-			<description>Profile Name</description>
-			<posx>180</posx>
-			<posy>136</posy>
-			<width>280</width>
-			<align>left</align>
-			<font>special13</font>
-			<textcolor>FFFFFFFF</textcolor>
-		</control>
-
-		<control type="label" id="0">
-			<description>Profile Name</description>
-			<posx>180</posx>
-			<posy>162</posy>
-			<width>280</width>
-			<align>left</align>
-			<font>special13</font>
-			<textcolor>DDced8da</textcolor>
-			<label>$LOCALIZE[ 20070 ]</label>
-		</control>
-
-		<control type="label" id="1001">
-			<description>Profile Directory</description>
-			<posx>180</posx>
-			<posy>182</posy>
-			<width>280</width>
-			<align>left</align>
-			<font>special13</font>
-			<textcolor>FFFFFFFF</textcolor>
-		</control>
-
-		<control type="spincontrol" id="60">
-			<description>Next page button</description>
-			<posx>300</posx>
-			<posy>300</posy>
-			<subtype>int</subtype>
-			<font>font12</font>
-			<onleft>60</onleft>
-			<onright>60</onright>
-			<ondown>2</ondown>
-		</control> -->
 
 		<control type="grouplist" id="5">
 			<description>control area</description>
@@ -114,14 +61,12 @@
 			<font>Font_ContextMenuButton</font>	
 			<textoffsetx>20</textoffsetx>
 			<aligny>center</aligny>
-			<include condition="!Skin.HasSetting(darkshowcase)">ProfileContentButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ProfileContentButtonNight</include>
+			<include>ProfileContentButton</include>
 		</control>
 
 		<control type="radiobutton" id="8">
 			<font>Font_ContextMenuButton</font>
-			<include condition="!Skin.HasSetting(darkshowcase)">ProfileContentButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ProfileContentButtonNight</include>
+			<include>ProfileContentButton</include>
 			<pulseonselect>false</pulseonselect>
 			<radiowidth>94</radiowidth>
 			<radioposx>595</radioposx>
@@ -136,8 +81,7 @@
 		<control type="spincontrolex" id="9">
 			<description>directory content select spincontrol</description>
 			<font>Font_ContextMenuButton</font>
-			<include condition="!Skin.HasSetting(darkshowcase)">ProfileContentButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ProfileContentButtonNight</include>
+			<include>ProfileContentButton</include>
 			<textureup>settings/spin-up.png</textureup>
 			<texturedown>settings/spin-down.png</texturedown>
 			<textureupfocus>settings/spin-up-focus.png</textureupfocus>
@@ -168,14 +112,6 @@
 			<textoffsetx>12</textoffsetx>
 		</control>
 
-	<control type="image" id="11">
-		<description>separator image</description>
-		<width>350</width>
-		<height>5</height>
-		<texture>-</texture>
-		<visible>!Skin.HasSetting(darkshowcase)</visible>
-	</control>
-
 	<control type="group" id="9001">		
 		<control type="button" id="28">
 			<description>ok button</description>
@@ -190,8 +126,7 @@
 			<onup>29</onup>
 			<ondown>29</ondown>
 			<texturenofocus>-</texturenofocus>
-			<include condition="!Skin.HasSetting(darkshowcase)">ProfileButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ProfileButtonNight</include>
+			<include>ProfileButton</include>
 		</control>
 
 		<control type="button" id="29">
@@ -207,8 +142,7 @@
 			<onup>28</onup>
 			<ondown>28</ondown>
 			<texturenofocus>-</texturenofocus>
-			<include condition="!Skin.HasSetting(darkshowcase)">ProfileButtonLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ProfileButtonNight</include>
+			<include>ProfileButton</include>
 		</control>
 		</control>
 		
@@ -216,8 +150,9 @@
 			<description>foreground image</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<include condition="!Skin.HasSetting(darkshowcase)">ProfileSettingsFrontLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ProfileSettingsFrontNight</include>
+			<width>848</width>
+			<height>288</height>
+			<texture>dialogs/profilesettings_front.png</texture>
 		</control>
 	</control>
 

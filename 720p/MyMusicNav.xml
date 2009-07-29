@@ -1,5 +1,7 @@
 <window id="502">
-	<defaultcontrol>50</defaultcontrol>
+	<include condition="Skin.HasSetting(music_disablemultiwall) + Skin.HasSetting(music_disablelist)">Furniture_MusicDefaultControlWall</include>
+	<include condition="Skin.HasSetting(music_disablewall) + Skin.HasSetting(music_disablelist)">Furniture_MusicDefaultControlMultiWall</include>
+	<include condition="![Skin.HasSetting(music_disablemultiwall) + Skin.HasSetting(music_disablelist)] + ![Skin.HasSetting(music_disablewall) + Skin.HasSetting(music_disablelist)]">Furniture_MusicDefaultControlList</include>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 
@@ -24,18 +26,19 @@
 		<include>Animation_FanartFade</include>
 	</control>
 	
-	<include>Furniture_WallBackground</include>	
+	<include condition="!Skin.HasSetting(music_disablewall)">Furniture_WallBackground</include>
+	<include condition="!Skin.HasSetting(music_disablemultiwall)">Furniture_MultiWallBackground</include>
 
 	<control type="group">
 		<include>FullscreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
 		<include>Furniture_Time</include>
 		<include>Furniture_MediaPanel</include>
-		<include>Objects_ShowcaseMenuPanel</include>
+		<include>Objects_MenuPanel</include>
 
-		<include>Viewtype_Wall</include>
-		<include>Furniture_WallTime</include>
-		<include>Furniture_WallRSS</include>
+		<include condition="!Skin.HasSetting(music_disablewall)">Viewtype_Wall</include>
+		<include condition="!Skin.HasSetting(music_disablewall)">Furniture_WallTime</include>
+		<include condition="!Skin.HasSetting(music_disablewall)">Furniture_WallRSS</include>
 		
 		<control type="group">
 	
@@ -57,9 +60,8 @@
 					<label>$LOCALIZE[31050] $INFO[Container.ViewMode]</label>
 					<include>Objects_MediaMenuButton</include>
 					<onclick>SetFocus(69)</onclick>
+					<visible>![Skin.HasSetting(music_disablewall) + Skin.HasSetting(music_disablemultiwall)] + ![Skin.HasSetting(music_disablewall) + Skin.HasSetting(music_disablelist)] + ![Skin.HasSetting(music_disablelist) + Skin.HasSetting(music_disablemultiwall)]</visible>
 				</control>
-
-				<include>Objects_FlattenFlowButton</include>
 				
 				<control type="button" id="3">
 					<label>103</label>
@@ -74,8 +76,10 @@
 					<altclick>Skin.Reset(musiclistfull)</altclick>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
+				
+				<include condition="!Skin.HasSetting(music_disablemultiwall)">Objects_MultiWallMusicInfoButtons</include>
 
-				<include>Objects_PanelDensityButton</include>
+				<include condition="!Skin.HasSetting(music_disablelist)">Objects_PanelDensityButton</include>
 				
 				<control type="togglebutton" id="901">
 					<include>Objects_MediaMenuButton</include>				
@@ -86,9 +90,18 @@
 					<visible>Control.IsVisible(57)</visible>
 				</control>
 
-				<include>Objects_WallGridButton</include>
+				<include condition="!Skin.HasSetting(music_disablewall)">Objects_WallGridButton</include>
 				
-				<include>Objects_WallBackdropButton</include>				
+				<include condition="!Skin.HasSetting(music_disablewall)">Objects_WallBackdropButton</include>
+				
+				<control type="togglebutton" id="995">
+					<include>Objects_MediaMenuButton</include>				
+					<label>$LOCALIZE[32002]: $LOCALIZE[31077]</label>
+					<altlabel>$LOCALIZE[32002]: $LOCALIZE[31078]</altlabel>
+					<usealttexture>Skin.HasSetting(nosortlabel)</usealttexture>
+					<onclick>Skin.ToggleSetting(nosortlabel)</onclick>
+					<visible>Control.IsVisible(57) + [Window.IsActive(500) | Window.IsActive(502)] + !Skin.HasSetting(music_disablemultiwall)</visible>
+				</control>				
 				
 				<control type="button" id="5">
 					<label>31057</label>
@@ -101,15 +114,13 @@
 				<include>Objects_MediaDebugButtons</include>
 			</control>
 		</control>
-	
-		<include>Viewtype_Showcase</include>
-		<include>Viewtype_List</include>
+
+		<include condition="!Skin.HasSetting(music_disablemultiwall)">Viewtype_Multiwall</include>
+		<include condition="!Skin.HasSetting(music_disablelist)">Viewtype_List</include>
 		
 	</control>
 
-	<include>Furniture_DarkGradient</include>	
-	<include>ViewChange</include>
-	<!--<include>Background_ContextBlack</include>-->
+	<include condition="![Skin.HasSetting(music_disablewall) + Skin.HasSetting(music_disablemultiwall)] + ![Skin.HasSetting(music_disablewall) + Skin.HasSetting(music_disablelist)] + ![Skin.HasSetting(music_disablelist) + Skin.HasSetting(music_disablemultiwall)]">ViewChange</include>
 	<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
 	
 	</controls>

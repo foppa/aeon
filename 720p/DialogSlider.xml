@@ -18,8 +18,7 @@
 				<description>Dialog header</description>
 				<posy>8</posy>
 				<posx>24</posx>
-				<include condition="!Skin.HasSetting(darkshowcase)">TextColorLight</include>
-				<include condition="Skin.HasSetting(darkshowcase)">TextColorNight</include> 
+				<textcolor>FF818181</textcolor>
 				<font>Font_ProgressLabel</font>
 				<align>left</align>
 			</control>
@@ -30,8 +29,7 @@
 				<posy>8</posy>
 				<width>268</width> 
 				<height>20</height> 
-				<include condition="!Skin.HasSetting(darkshowcase)">TextColorLight</include>
-				<include condition="Skin.HasSetting(darkshowcase)">TextColorNight</include> 
+				<textcolor>FF818181</textcolor> 
 				<font>Font_ProgressLabel</font>    
 				<align>right</align> 
 			</control>

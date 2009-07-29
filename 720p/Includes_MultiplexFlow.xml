@@ -61,12 +61,6 @@
         <aspectratio scalediffuse="false">stretch</aspectratio>
 	</include>
 	
-	<include name="MovieMultiplexThumbReflectionMain">
-		<include condition="!Skin.HasSetting(dvdcase)">MovieMultiplexMaskReflectionNormal</include>
-        <include condition="Skin.HasSetting(dvdcase)">MovieMultiplexMaskReflectionDVD</include>
-        <aspectratio scalediffuse="false">stretch</aspectratio>
-	</include>
-	
 	<include name="MovieMultiplexCaseReflectionDVD">
 		<include>MultiplexIconDimensionsWrapReflectDVDCaseFlow</include>
 		<texture>multiplex/boxes/multiplex_borderreflect.png</texture>
@@ -77,12 +71,6 @@
 	<include name="MovieMultiplexThumbReflectionDVD">
 		<include>MultiplexIconDimensionsWrapReflectDVDCaseFlow</include>
         <texture>multiplex/boxes/multiplex_glassreflect.png</texture>
-        <aspectratio scalediffuse="false">stretch</aspectratio>
-		<visible>Skin.HasSetting(dvdcase)</visible>
-	</include>
-	
-	<include name="MovieMultiplexThumbReflectionDVDMain">
-        <include>MovieMultiplexPosterReflectionDVD</include>
         <aspectratio scalediffuse="false">stretch</aspectratio>
 		<visible>Skin.HasSetting(dvdcase)</visible>
 	</include>
@@ -2191,18 +2179,18 @@
                     </control>
                     <include>MultiplexMovieOverlays</include>
                     <control type="image">
-                        <include>MovieMultiplexThumbReflectionMain</include>
+                        <include>MovieMultiplexThumbReflection</include>
                         <info>ListItem(0).Thumb</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
-                        <include>MovieMultiplexThumbReflectionMain</include>
+                        <include>MovieMultiplexThumbReflection</include>
                         <info>ListItem(0).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
 					<control type="image">
                         <description>Glass overlay reflection</description>
-                        <include>MovieMultiplexThumbReflectionDVDMain</include>
+                        <include>MovieMultiplexThumbReflectionDVD</include>
                     </control>
 					<control type="image">
 						<include condition="!Skin.HasSetting(dvdcase)">WatchedOverlayMultiPlexNormalFlow</include>

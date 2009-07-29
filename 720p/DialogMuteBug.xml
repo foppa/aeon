@@ -28,8 +28,7 @@
 			<posy>10</posy>
 			<width>688</width>
 			<height>163</height>
-			<include condition="!Skin.HasSetting(darkshowcase)">MuteBackLight</include>		
-			<include condition="Skin.HasSetting(darkshowcase)">MuteBackNight</include>	
+			<texture>dialogs/contextbar_back.png</texture>	
 		</control>
 	
 		<control type="label">

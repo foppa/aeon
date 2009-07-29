@@ -97,7 +97,7 @@
 		<font>Font_WallInfoValue</font>
 		<textcolor>FFFFFFFF</textcolor>		
 	</include>
-	
+
 	<include name="WallTitleLabel">
 		<posx>0</posx>
 		<posy>-25</posy>
@@ -256,14 +256,14 @@
 	</include>
 	
 	<include name="WallInfoAnimation">
-		<animation type="Visible" reversible="false">
+		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="0" end="100" time="400" delay="3085" />
 			<effect type="zoom" center="auto" start="0" end="100" time="550" delay="3000" tween="back" acceleration="-2" />
 		</animation>
 	</include>
 	
 	<include name="WallInfoOpenAnimationAuto">
-		<animation type="WindowOpen" reversible="false">
+		<animation type="Visible" reversible="false">
 			<effect type="fade" start="0" end="100" time="400" delay="3085" />
 			<effect type="zoom" center="auto" start="0" end="100" time="550" delay="3000" tween="back" acceleration="-2" />
 		</animation>
@@ -276,10 +276,10 @@
 	<include name="WallInfoPaneMoviesVars">
 		<width>442</width>
 		<height>432</height>
-		<include condition="![Skin.HasSetting(wallinfoon) | Skin.HasSetting(wallinfoon) ]">WallInfoOpenAnimationAuto</include>
+		<include condition="![Skin.HasSetting(wallinfoon) | Skin.HasSetting(wallinfoff)]">WallInfoAnimation</include>
+		<include condition="![Skin.HasSetting(wallinfoon) | Skin.HasSetting(wallinfoff)]">WallInfoOpenAnimationAuto</include>
 		<include condition="Skin.HasSetting(wallinfoon)">WallInfoOpenAnimationOn</include>
 		<animation effect="fade" end="0" time="200">WindowClose</animation>
-		<include condition="![Skin.HasSetting(wallinfoon) | Skin.HasSetting(wallinfoon) ]">WallInfoAnimation</include>
 		<visible>Container.Content(movies) + Control.IsVisible(53) + Control.HasFocus(53) + [Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1)]</visible>
 	</include>
 	

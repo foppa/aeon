@@ -4,15 +4,6 @@
 				
 		<control type="image">
 			<include>FullscreenDimensions</include>
-			<texture>common/black.png</texture>texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-			<visible>Control.IsVisible(53) + Window.IsActive(25) + !Skin.HasSetting(transparentwall)</visible>
-			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-		</control>
-		
-		<control type="image">
-			<include>FullscreenDimensions</include>
 			<texture>wall/wall_background.png</texture>
 			<visible>Control.IsVisible(53) + ![Skin.HasSetting(smallmoviewall) + Window.IsActive(25)]</visible>
 			<include>Animation_WindowFade200</include>
@@ -64,14 +55,6 @@
 			<visible>Skin.HasSetting(smallmoviewall) + Control.IsVisible(53) + [Window.IsActive(1) | Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)]]</visible>
 			<include>Animation_CommonFade</include>			
 		</control>		
-	</include>
-	
-	<include name="Furniture_WallVignette">
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture>wall/wall_vignette.png</texture>
-			<visible>Control.IsVisible(53)</visible>			
-		</control>
 	</include>
 	
 	<include name="WallIconDimensions">
@@ -183,7 +166,7 @@
 					<include>WallIconDimensions</include>
 					<bordertexture border="-3">wall/wall_nfborder.png</bordertexture>
 					<texture>wall/wall_nfoverlay.png</texture>
-				</control>				
+				</control>			
 			</itemlayout>
 			<focusedlayout width="133" height="133" condition="!Skin.HasSetting(smallmusicwall)">
 				<control type="image">
@@ -411,7 +394,9 @@
 			<animation effect="slide" start="100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="400" condition="[[Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + Container(53).Column(7)] | [[Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)] + Container(53).Column(8)] + !ControlGroup(7000).HasFocus()">Conditional</animation>				
 			<animation effect="slide" start="-18" end="-18" time="0" condition="Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>				
-		</control>	
+		</control>
+				
+		<include>Furniture_WallMediaFlags</include>
 		
 		<include condition="Window.IsActive(20) | Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">MusicWall</include>
 		<include condition="Window.IsActive(28) | Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)">MovieWall</include>

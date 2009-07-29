@@ -13,7 +13,7 @@
 		<include>Animation_OpenCloseZoom</include>
 		<include>Furniture_Time</include>
 		<include>Furniture_MediaPanel</include>
-		<include>Objects_ShowcaseMenuPanel</include>
+		<include>Objects_MenuPanel</include>
 
 		<control type="group">
 	
@@ -215,7 +215,6 @@
 		</control>	
 	</control>
 	
-	<!--<include>Background_ContextBlack</include>-->
 	<include>Furniture_Debug</include>
 	
 	</controls>

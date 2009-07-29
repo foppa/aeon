@@ -1,5 +1,8 @@
 <window id="25">
-	<defaultcontrol always="true">50</defaultcontrol>
+	<include condition="!Skin.HasSetting(movies_disablelist)">Furniture_MovieDefaultControlList</include>
+	<include condition="!Skin.HasSetting(movies_disablemultiplex)">Furniture_MovieDefaultControlMultiPlex</include>
+	<include condition="!Skin.HasSetting(movies_disablewall)">Furniture_MovieDefaultControlWall</include>
+	<include condition="!Skin.HasSetting(movies_disablemultiwall)">Furniture_MovieDefaultControlMultiWall</include>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 
@@ -13,36 +16,30 @@
 		<animation effect="fade" start="0" end="100" time="150" delay="3000">Visible</animation>
 	</control>
 	
-	<include condition="Skin.HasSetting(videotv) + Skin.HasSetting(nomoviefanart)">MediaBackdropsTV</include>
-	<include condition="Skin.HasSetting(videomovies) + Skin.HasSetting(nomoviefanart)">MediaBackdropsMovies</include>
+	<include condition="Skin.HasSetting(videotv) + Skin.HasSetting(notvfanart) + Skin.HasSetting(nocurtains)">MediaBackdropsTV</include>
+	<include condition="Skin.HasSetting(videomovies)  + Skin.HasSetting(nomoviefanart) + Skin.HasSetting(nocurtains)">MediaBackdropsMovies</include>
+		
+	<include condition="[Skin.HasSetting(videomovies) + Skin.HasSetting(nocurtains) + !Skin.HasSetting(nomoviefanart)] | [Skin.HasSetting(videotv) + Skin.HasSetting(nocurtains) + !Skin.HasSetting(notvfanart)]">MediaBackdropsMovieFanart</include>
+	<include condition="Skin.HasSetting(videotv) + !Skin.HasSetting(notvfanart) + Skin.HasSetting(nocurtains)">MediaBackdropsTVFanart</include>
+	<include condition="!Skin.HasSetting(nocurtains)">MediaBackdropsMultiplex</include>
 
-	<control type="largeimage" id="102">
-		<include>FullscreenDimensions</include>
-        <visible>[Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52) | Control.IsVisible(53)] + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image))</visible>
-		<fadetime>400</fadetime>
-		<texture>$INFO[listitem.property(fanart_image)]</texture>
-		<include>Animation_FanartFade</include>
-	</control>
-	
-	<include condition="Skin.HasSetting(videotv)">MediaBackdropsTVFanart</include>
-	<include>MediaBackdropsMultiplex</include>
+	<include condition="!Skin.HasSetting(movie_disablewall)">Furniture_WallBackground</include>
+	<include condition="!Skin.HasSetting(movie_disablemultiwall)">Furniture_MultiWallBackground</include>
 
-	<include>Furniture_WallBackground</include>
-	
 	<control type="group">
 		<include>FullscreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
 		<include>Furniture_Time</include>		
 		<include>Conditions_HiddenByInfoPages</include>
 		<include>Furniture_MediaPanel</include>
-		<include>Objects_ShowcaseMenuPanel</include>
+		<include>Objects_MenuPanel</include>
 		<include>ListFade</include>
-		<include>Viewtype_Wall</include>
-		<include>Furniture_WallTime</include>
-		<include>Furniture_WallRSS</include>		
+		<include condition="!Skin.HasSetting(movie_disablewall)">Viewtype_Wall</include>
+		<include condition="!Skin.HasSetting(movie_disablewall)">Furniture_WallTime</include>
+		<include condition="!Skin.HasSetting(movie_disablewall)">Furniture_WallRSS</include>
 		
 		<control type="group">
-	
+		
 			<control type="image">
 				<include>Objects_MediaLogo</include>
 				<texture>windows/logo_movies.png</texture>
@@ -68,10 +65,8 @@
 					<label>$LOCALIZE[31050] $INFO[Container.ViewMode]</label>
 					<include>Objects_MediaMenuButton</include>
 					<onclick>SetFocus(69)</onclick>
-					<visible>!Skin.HasSetting(videotv) | [Skin.HasSetting(videotv) + Skin.HasSetting(unlockTVviews)]</visible>
+					<visible>[!Skin.HasSetting(videotv) | [Skin.HasSetting(videotv) + Skin.HasSetting(unlockTVviews)]] + ![Skin.HasSetting(movie_disablelist) + Skin.HasSetting(movie_disablemultiplex) + Skin.HasSetting(movie_disablewall] + ![Skin.HasSetting(movie_disablelist) + Skin.HasSetting(movie_disablemultiplex) + Skin.HasSetting(movie_disablemultiwall] + ![Skin.HasSetting(movie_disablelist) + Skin.HasSetting(movie_disablewall) + Skin.HasSetting(movie_disablemultiwall] + ![Skin.HasSetting(movie_disablemultiplex) + Skin.HasSetting(movie_disablewall) + Skin.HasSetting(movie_disablemultiwall]</visible>
 				</control>
-
-				<include>Objects_FlattenFlowButton</include>
 				
 				<control type="button" id="3">
 					<label>103</label>
@@ -80,11 +75,15 @@
 
 				<include condition="!Skin.HasSetting(nomultiplexinfobuttons)">Objects_MultiplexInfoButtons</include>
 				
-				<include>Objects_WallInfoButtons</include>		
+				<include>Objects_WallInfoButtons</include>
+				<include condition="Skin.HasSetting(videomovies)">Objects_MultiWallInfoButtons</include>
+				<include condition="Skin.HasSetting(videotv)">Objects_MultiWallTVInfoButtons</include>
 				
 				<include condition="!Skin.HasSetting(nomultiplexstylebuttons)">Objects_MultiplexStyleButtons</include>
 				
 				<include condition="!Skin.HasSetting(nomultiplexstylebuttons)">Objects_MultiplexCoverStyleButtons</include>
+				
+				<include condition="Skin.HasSetting(videotv)">Objects_MultiWallLayoutButtons</include>
 				
 				<control type="togglebutton" id="940">
 					<include>Objects_MediaMenuButton</include>				
@@ -115,14 +114,15 @@
 					<onclick>Skin.SetBool(notvfanart)</onclick>
 					<onclick>XBMC.ReloadSkin</onclick>
 					<altclick>Skin.Reset(notvfanart)</altclick>
+					<altclick>XBMC.ReloadSkin</altclick>
 					<visible>Window.IsActive(25) + Skin.HasSetting(videotv)</visible>
 				</control>
+				
+				<include>Objects_CurtainsButton</include>
 				
 				<include condition="!Skin.HasSetting(nomediaflagsbutton)">Objects_FlagsButton</include>
 
 				<include>Objects_WallGridButton</include>
-				
-				<include>Objects_WallBackdropButton</include>
 
 				<control type="togglebutton" id="993">
 					<include>Objects_MediaMenuButton</include>				
@@ -140,11 +140,7 @@
 					<usealttexture>Skin.HasSetting(nomovieoverlays)</usealttexture>
 					<onclick>Skin.ToggleSetting(nomovieoverlays)</onclick>
 					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies)</visible>
-				</control>			
-
-				<include>Objects_CurtainsButton</include>
-				
-				<include>Objects_LightNightButtons</include>
+				</control>
 
 				<control type="togglebutton" id="14">
 					<description>Watched Toggle Button</description>
@@ -173,21 +169,18 @@
 			</control>
 		</control>
 		
-		<include>Viewtype_Showcase</include>
-		<include>Viewtype_List</include>
-		<include condition="!Skin.HasSetting(oldmultiplex)">Viewtype_Multiplex</include>
-		<include condition="Skin.HasSetting(oldmultiplex)">Viewtype_MultiplexOld</include>
+		<include>Viewtype_Multiwall</include>
+		<include condition="!Skin.HasSetting(movie_disablelist)">Viewtype_List</include>
+		<include condition="!Skin.HasSetting(movie_disablemultiplex)">Viewtype_Multiplex</include>
 		
 	</control>
 
-	<include condition="Skin.HasSetting(videomovies)">Furniture_ShowcaseMediaFlags</include>
-	<include condition="Skin.HasSetting(videotv)">Furniture_EpisodeMediaFlags</include>
-		
-	<include>Furniture_WallMediaFlags</include>
+	<include condition="Skin.HasSetting(videomovies) + !Skin.HasSetting(disablemultiplex)">Furniture_MultiplexMediaFlags</include>
+	<include condition="Skin.HasSetting(videotv) + !Skin.HasSetting(disablemultiplex)">Furniture_EpisodeMediaFlags</include>
+	<include condition="!Skin.HasSetting(movie_disablewall)">Furniture_MultiWallMediaFlags</include>
 	
-	<include>Furniture_DarkGradient</include>
-	<include>ViewChange</include>
-	<!--<include>Background_ContextBlack</include>-->
+	<include condition="!Skin.HasSetting(movie_disablemultiplex)">Furniture_DarkGradient</include>
+	<include condition="![Skin.HasSetting(movie_disablelist) + Skin.HasSetting(movie_disablemultiplex) + Skin.HasSetting(movie_disablewall] + ![Skin.HasSetting(movie_disablelist) + Skin.HasSetting(movie_disablemultiplex) + Skin.HasSetting(movie_disablemultiwall] + ![Skin.HasSetting(movie_disablelist) + Skin.HasSetting(movie_disablewall) + Skin.HasSetting(movie_disablemultiwall] + ![Skin.HasSetting(movie_disablemultiplex) + Skin.HasSetting(movie_disablewall) + Skin.HasSetting(movie_disablemultiwall]">ViewChange</include>
 	<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
 	
 </controls>	

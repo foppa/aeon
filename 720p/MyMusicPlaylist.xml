@@ -14,7 +14,8 @@
 		<include>Conditions_HiddenByInfoPages</include>
 		<include>Furniture_Time</include>
 		<include>Furniture_MediaPanel</include>
-		<include>Objects_ShowcaseMenuPanel</include>
+		<include>Objects_MenuPanel</include>
+		<include>Furniture_MultiWallBackground</include>
 
 		<control type="group">
 	
@@ -38,8 +39,6 @@
 					<onfocus>Skin.Reset(bmtransitnowplaying)</onfocus>
 					<onclick>SetFocus(69)</onclick>
 				</control>
-
-				<include>Objects_FlattenFlowButton</include>
 				
 				<control type="togglebutton" id="20">
 					<label>ORDER: NORMAL</label>
@@ -86,13 +85,12 @@
 			</control>
 		</control>
 		<include>Viewtype_List</include>
-		<include>Viewtype_Showcase</include>
+		<include>Viewtype_Multiwall</include>
 
 	</control>
 
 	<include>Furniture_DarkGradient</include>	
 	<include>ViewChange</include>
-	<!--<include>Background_ContextBlack</include>-->
 	<include>Furniture_Debug</include>
 	
 	</controls>

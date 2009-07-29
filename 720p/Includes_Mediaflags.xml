@@ -1,36 +1,29 @@
 <includes>
 
+	<include name="MultiplexMediaFlagShade">
+		<colordiffuse>FFe1e1e1</colordiffuse>
+	</include>
+
 	<include name="Furniture_EpisodeMediaFlagsVars">
 		<posy>655</posy>
 		<width>110</width>
 		<height>72</height>
 		<include>Animation_CommonFade</include>
-		<include>Animation_HideShowcase</include>
-
+		<include>Animation_HideMultiplex2</include>
 		<include>Animation_HideMultiplex</include>
-		<visible>Control.IsVisible(57) | Control.IsVisible(52)</visible>
-		<include condition="!Skin.HasSetting(darkshowcase)">ShowcaseMediaFlagLightShade</include>
-		<include condition="Skin.HasSetting(darkshowcase)">ShowcaseMediaFlagNightShade</include>
+		<visible>Control.IsVisible(52)</visible>
+		<include>MultiplexMediaFlagShade</include>
 	</include>
 
-	<include name="ShowcaseMediaFlagLightShade">
-		<colordiffuse>74000000</colordiffuse>	
-	</include>
-
-	<include name="ShowcaseMediaFlagNightShade">
-		<colordiffuse>FFe1e1e1</colordiffuse>	
-	</include>
-
-	<include name="Furniture_ShowcaseMediaFlagsVars">
+	<include name="Furniture_MultiplexMediaFlagsVars">
 		<posy>647</posy>
 		<width>110</width>
 		<height>72</height>
 		<include>Animation_CommonFade</include>
-		<include>Animation_HideShowcase</include>
+		<include>Animation_HideMultiplex2</include>
 		<include>Animation_HideMultiplex</include>
-		<visible>Control.IsVisible(57) | Control.IsVisible(52)</visible>
-		<include condition="!Skin.HasSetting(darkshowcase)">ShowcaseMediaFlagLightShade</include>
-		<include condition="Skin.HasSetting(darkshowcase)">ShowcaseMediaFlagNightShade</include>
+		<visible>Control.IsVisible(52)</visible>
+		<include>MultiplexMediaFlagShade</include>
 	</include>
 
 	<include name="Furniture_ListMediaFlagsVars">
@@ -39,11 +32,10 @@
 		<width>90</width>
 		<height>59</height>
 		<include>Animation_CommonFade</include>
-		<include>Animation_HideShowcase</include>
+		<include>Animation_HideMultiplex2</include>
 		<include>Animation_HideMultiplex</include>
 		<visible>Control.IsVisible(50)</visible>
-		<include condition="!Skin.HasSetting(darkshowcase)">ShowcaseMediaFlagLightShade</include>
-		<include condition="Skin.HasSetting(darkshowcase)">ShowcaseMediaFlagNightShade</include>
+		<include>MultiplexMediaFlagShade</include>
 	</include>
 
 	<include name="Furniture_PanelMediaFlagsVars">
@@ -51,17 +43,7 @@
 		<width>90</width>
 		<height>59</height>
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(52) | Control.IsVisible(53)</visible>
-	</include>
-
-	<include name="Furniture_ShowcaseMediaFlagsBlack">
-		<posy>647</posy>
-		<width>110</width>
-		<height>72</height>
-		<include>Animation_CommonFade</include>
-		<include>Animation_HideShowcase</include>
-		<include>Animation_HideMultiplex</include>
-		<include>Conditions_ShowcaseIsVisible</include>
+		<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(57)</visible>
 	</include>
 
 	<include name="Furniture_MovieInfoFlagSource">
@@ -251,181 +233,77 @@
 		</control>
 	</include>
 
-	<include name="Furniture_ShowcaseMediaFlags">
+	<include name="Furniture_MultiplexMediaFlags">
 		<control type="group">
-			<visible>Window.IsActive(25) + [Control.IsVisible(57) | [Control.IsVisible(52) + !Skin.HasSetting(oldmultiplex)]] + !Skin.HasSetting(nomediaflags) + Container.Content(movies) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
-			<include>Animation_CommonFade</include>
-			<control type="image">
-				<posx>0</posx>
-				<posy>569</posy>
-				<width>298</width>
-				<height>151</height>
-				<texture>showcase/flagshade.png</texture>
-				<include>Animation_HideShowcase</include>
-				<visible>!Skin.HasSetting(darkshowcase)</visible>
-			</control>
-			<control type="image">
-				<posx>982</posx>
-				<posy>569</posy>
-				<width>298</width>
-				<height>151</height>
-				<texture flipx="true">showcase/flagshade.png</texture>
-				<include>Animation_HideShowcase</include>
-				<visible>!Skin.HasSetting(darkshowcase)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Window.IsActive(25) + [Control.IsVisible(57) | [Control.IsVisible(52) + !Skin.HasSetting(oldmultiplex)]] + !Skin.HasSetting(nomediaflags) + Container.Content(movies) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
+			<visible>Window.IsActive(25) + Control.IsVisible(52) + !Skin.HasSetting(nomediaflags) + Container.Content(movies) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
 			<include>Animation_CommonFade</include>
 			<control type="group">
 				<posx>80</posx>
 				<control type="image">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>flags/default.png</texture>
 					<visible>!Control.IsVisible(81) + !Skin.HasSetting(nodefaultflags)</visible>
 				</control>
 				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>$INFO[listitem.studio,flags/studios/,.png]</texture>
 				</control>
 			</control>
 			<control type="group">
 				<posx>975</posx>
 				<control type="image">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>flags/defaultscreen.png</texture>
 					<visible>!Control.IsVisible(83) + !Skin.HasSetting(nodefaultflags)</visible>
 				</control>
 				<control type="image" id="83">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>$INFO[ListItem.VideoResolution,flags/,.png]</texture>
 				</control>
 			</control>
 			<control type="group">
 				<posx>1085</posx>
 				<control type="image">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>$INFO[ListItem.AudioChannels,flags/,ch.png]</texture>
 				</control>
 				<control type="image">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>$INFO[ListItem.AudioCodec,flags/,.png]</texture>
 				</control>
 			</control>
 			<control type="group">
 				<posx>190</posx>
 				<control type="image" id="82">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>$INFO[ListItem.VideoCodec,flags/,.png]</texture>
 					<visible>!substring(listitem.filename,dvd) + !substring(listitem.filename,bluray) + !substring(listitem.filename,blu-ray) + !substring(listitem.filename,bdrip) + !substring(listitem.filename,.iso,Right) + !substring(listitem.filename,.ifo,Right)</visible>
 				</control>
 				<control type="image" id="82">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>flags/hddvd.png</texture>
 					<visible>substring(listitem.filename,hddvd) | substring(listitem.filename,hd-dvd)</visible>
 				</control>
 				<control type="image" id="82">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>flags/bluray.png</texture>
 					<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,bdrip)</visible>
 				</control>
 				<control type="image" id="82">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>flags/dvd.png</texture>
 					<visible>[substring(listitem.filename,dvd) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,hd-dvd)] | substring(listitem.filename,.iso,Right) | substring(listitem.filename,.ifo,Right)</visible>
 				</control>
 				<control type="image" id="82">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_MultiplexMediaFlagsVars</include>
 					<texture>flags/dvb.png</texture>
 					<visible>substring(listitem.filename,dvb)</visible>
 				</control>
 			</control>
 		</control>
 	</include>
-
-	<include name="Furniture_MultiplexMediaFlags">
-		<control type="group">
-			<visible>Window.IsActive(25) + Control.IsVisible(52) + !Skin.HasSetting(nomediaflags) + Container.Content(movies)</visible>
-			<include>Animation_CommonFade</include>
-			<include>Animation_HideMultiplex</include>
-			<control type="group">
-				<posx>60</posx>
-				<control type="image">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/default.png</texture>
-					<visible>!Control.IsVisible(91) + !Skin.HasSetting(nodefaultflags)</visible>
-				</control>
-				<control type="image" id="91">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>$INFO[listitem.studio,flags/studios/,.png]</texture>
-				</control>
-			</control>
-			<control type="group">
-				<posx>1005</posx>
-				<control type="image">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/defaultscreen.png</texture>
-					<visible>!Control.IsVisible(93) + !Skin.HasSetting(nodefaultflags)</visible>
-				</control>
-				<control type="image" id="93">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>$INFO[ListItem.VideoResolution,flags/,.png]</texture>
-				</control>
-			</control>
-			<control type="group">
-				<posx>1115</posx>
-				<control type="image">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>$INFO[ListItem.AudioChannels,flags/,ch.png]</texture>
-				</control>
-				<control type="image">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>$INFO[ListItem.AudioCodec,flags/,.png]</texture>
-				</control>
-			</control>
-			<control type="group">
-				<posx>170</posx>
-				<control type="image">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/defaultsource.png</texture>
-					<visible>!Control.IsVisible(92) + !Skin.HasSetting(nodefaultflags)</visible>
-				</control>		
-				<control type="image" id="92">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>$INFO[ListItem.VideoCodec,flags/,.png]</texture>
-				</control>
-
-			</control>
-		</control>
-	</include>
 	
 	<include name="Furniture_EpisodeMediaFlags">
-
-		<control type="group">
-			<visible>Window.IsActive(25) + [Control.IsVisible(57) | [Control.IsVisible(52) + !Skin.HasSetting(oldmultiplex)]] + !Skin.HasSetting(nomediaflags) + Container.Content(movies) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
-			<include>Animation_CommonFade</include>
-			<control type="image">
-				<posx>0</posx>
-				<posy>569</posy>
-
-				<width>298</width>
-				<height>151</height>
-				<texture>showcase/flagshade.png</texture>
-				<include>Animation_HideShowcase</include>
-				<visible>!Skin.HasSetting(darkshowcase)</visible>
-			</control>
-
-			<control type="image">
-				<posx>982</posx>
-				<posy>569</posy>
-				<width>298</width>
-				<height>151</height>
-				<texture flipx="true">showcase/flagshade.png</texture>
-
-				<include>Animation_HideShowcase</include>
-				<visible>!Skin.HasSetting(darkshowcase)</visible>
-			</control>
-		</control>
 		<control type="group">
 			<visible>Window.IsActive(25) + [Control.IsVisible(57) | [Control.IsVisible(52) + !Skin.HasSetting(oldmultiplex)]] + !Skin.HasSetting(nomediaflags) + Container.Content(episodes) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
 			<include>Animation_CommonFade</include>
@@ -507,7 +385,7 @@
 	</include>
 	
 	<include name="Furniture_WallMediaFlagsVars">
-		<visible>Window.IsActive(25) + Control.IsVisible(53) + !Skin.HasSetting(nomediaflags) + Container.Content(movies)</visible>
+		<visible>Window.IsActive(25) + Control.IsVisible(53) + !Skin.HasSetting(nomediaflags) + [Container.Content(movies) | Container.Content(episodes)]</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_WindowFade200</include>
 			<animation effect="slide" start="0,12" end="0,12" time="0" condition="Skin.HasSetting(smallmoviewall) + [Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)] + !Container.Content(episodes)">Conditional</animation>
@@ -572,6 +450,68 @@
 			<posx>688</posx>
 			<include>Furniture_WallMediaFlagsVars</include>
 			<visible>[!Skin.HasSetting(smallmoviewall) + [Container(53).Column(4) | Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8)]] | [Skin.HasSetting(smallmoviewall) + [Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7) | Container(53).Column(8) | Container(53).Column(9) | Container(53).Column(10)]] </visible>
+		</control>
+	</include>
+	
+	<include name="Furniture_MultiWallMediaFlagsVars">
+		<visible>Window.IsActive(25) + Control.IsVisible(57) + !Skin.HasSetting(nomediaflags) + [Container.Content(movies) | Container.Content(episodes)]</visible>
+			<include>Animation_CommonFade</include>
+			<include>Animation_WindowFade200</include>
+			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+			<posy>207</posy>
+			<control type="group">
+				<posx>85</posx>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/default.png</texture>
+					<visible>!Control.IsVisible(91) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>
+				<control type="image" id="91">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>$INFO[Container(57).ListItem.studio,flags/studios/,.png]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>305</posx>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/defaultscreen.png</texture>
+					<visible>!Control.IsVisible(93) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>
+				<control type="image" id="93">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>$INFO[Container(57).ListItem.VideoResolution,flags/,.png]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>415</posx>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>$INFO[Container(57).ListItem.AudioChannels,flags/,ch.png]</texture>
+				</control>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>$INFO[Container(57).ListItem.AudioCodec,flags/,.png]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>195</posx>
+				<control type="image">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/defaultsource.png</texture>
+					<visible>!Control.IsVisible(92) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>		
+				<control type="image" id="92">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>$INFO[Container(57).ListItem.VideoCodec,flags/,.png]</texture>
+				</control>
+
+			</control>
+	</include>
+	
+	<include name="Furniture_MultiWallMediaFlags">
+		<control type="group">
+			<include>Furniture_MultiWallMediaFlagsVars</include>
 		</control>
 	</include>
 

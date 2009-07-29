@@ -14,8 +14,7 @@
 		<posy>120</posy>
 		<width>881</width>
 		<height>481</height>
-		<include condition="!Skin.HasSetting(darkshowcase)">OSDSettingsBackLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">OSDSettingsBackNight</include>
+		<texture>osd/osd_settings_back.png</texture>
 	</control>
 
 	<control type="list" id="3">
@@ -35,8 +34,7 @@
 				<posy>0</posy>
 				<width>781</width>
 				<height>40</height>
-				<include condition="!Skin.HasSetting(darkshowcase)">OSDSettingsButtonNoFocusLight</include>
-				<include condition="Skin.HasSetting(darkshowcase)">OSDSettingsButtonNoFocusNight</include>
+				<texture>osd/osd_settings_buttonnf.png</texture>
 			</control>
 			<control type="label">
 				<posx>30</posx>
@@ -55,8 +53,7 @@
 				<posy>0</posy>
 				<width>781</width>
 				<height>40</height>
-				<include condition="!Skin.HasSetting(darkshowcase)">OSDSettingsButtonFocusLight</include>
-				<include condition="Skin.HasSetting(darkshowcase)">OSDSettingsButtonFocusNight</include>
+				<texture>osd/osd_settings_buttonf.png</texture>
 			</control>		
 			<control type="label">
 				<posx>30</posx>

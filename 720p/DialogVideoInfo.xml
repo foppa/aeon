@@ -108,13 +108,14 @@
 		<texture>$INFO[listitem.path]poster.jpg</texture>
 		<aspectratio>stretch</aspectratio>
 	</control>
-	
-	<!-- Light & Night RightPanelTop -->
-	
+
 	<control type="image">
 		<description>background image</description>
-		<include condition="!Skin.HasSetting(darkshowcase)">InfoRightPanelTopLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">InfoRightPanelTopNight</include>
+		<posx>480</posx>
+		<posy>0</posy>
+		<width>800</width>
+		<height>720</height>
+		<texture>info/info_rightpaneltop.png</texture>
 	</control>	
 	
 <!-- Movie info -->
@@ -697,9 +698,7 @@
 			<visible>!Skin.HasSetting(movieratingtext)</visible>
 		</control>		
 	
-	</control>	
-
-	<!-- <include>Background_ContextBlack</include> -->
+	</control>
 	
 	</controls>
 </window>

@@ -18,6 +18,7 @@
 	</control>
 
 	<include>Furniture_WallBackground</include>
+	<include>Furniture_MultiWallBackground</include>
 	
 	<control type="group">
 		<include>FullscreenDimensions</include>
@@ -25,9 +26,10 @@
 		
 		<include>Furniture_Time</include>	
 		<include>Furniture_MediaPanel</include>
-		<include>Objects_ShowcaseMenuPanel</include>
+		<include>Objects_MenuPanel</include>
 
 		<include>Viewtype_Wall</include>
+		<include>Viewtype_Multiwall</include>
 		<include>Furniture_WallTime</include>
 		<include>Furniture_WallRSS</include>		
 		
@@ -52,8 +54,6 @@
 					<include>Objects_MediaMenuButton</include>
 					<onclick>SetFocus(69)</onclick>
 				</control>
-
-				<include>Objects_FlattenFlowButton</include>	
 
 				<control type="button" id="3">
 					<label>103</label>
@@ -88,14 +88,12 @@
 			</control>
 		</control>
 
-		<include>Viewtype_Showcase</include>
 		<include>Viewtype_List</include>
 
 	</control>
 
 	<include>Furniture_DarkGradient</include>	
 	<include>ViewChange</include>
-	<!--<include>Background_ContextBlack</include>-->
 	<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
 	
 	</controls>

@@ -320,8 +320,11 @@
 			<include>Furniture_SettingsFrontPanel</include>
 
 			<control type="image">
-				<include condition="!Skin.HasSetting(darkshowcase)">SettingsIntFrameTopLight</include>
-				<include condition="Skin.HasSetting(darkshowcase)">SettingsIntFrameTopNight</include>
+				<posx>234</posx>
+				<posy>41</posy>
+				<width>1033</width>
+				<height>637</height>
+				<texture>settings/settings_intframe_top.png</texture>
 				<include>Animation_SettingsInternalPanel</include>
 			</control>
 
@@ -381,7 +384,6 @@
 			
 		</control>
 
-	<!-- <include>Background_ContextBlack</include> -->
 	<include>Furniture_Debug</include>
 	
 </controls>

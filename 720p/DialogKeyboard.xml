@@ -3,18 +3,30 @@
 	<include>Animation_KeyboardPopup</include>	
 	<controls>
 	
-	<include condition="!Skin.HasSetting(darkshowcase)">KeyboardHeaderLight</include>
-	
 	<control type="group">
-		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardSizesLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">KeyboardSizesNight</include>
+		<posx>368</posx>
+		<posy>216</posy>
+		<width>546</width>
+		<height>332</height>
 		<control type="image" id="0">
 			<description>Panel</description>
-			<include condition="!Skin.HasSetting(darkshowcase)">KeyboardBackLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">KeyboardBackNight</include>
+			<posx>0</posx>
+			<posy>-42</posy>
+			<width>546</width>
+			<height>332</height>
+			<texture>keyboard/keyboard_back.png</texture>
 		</control>
 		
-		<include condition="Skin.HasSetting(darkshowcase)">KeyboardHeaderNight</include>
+		<control type="label" id="311">
+			<description>Dialog heading</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>546</width>
+			<height>22</height>
+			<font>Font_KeyboardTitle</font>
+			<align>center</align>
+			<textcolor>FF717171</textcolor>
+		</control>
 		
 		<control type="label" id="311">
 			<description>Dialog heading</description>

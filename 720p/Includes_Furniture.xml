@@ -1,4 +1,34 @@
 <includes>
+	
+<!-- Nav -->
+	
+	<include name="Furniture_MovieDefaultControlList">
+		<defaultcontrol>50</defaultcontrol>
+	</include>
+	
+	<include name="Furniture_MovieDefaultControlMultiPlex">
+		<defaultcontrol>52</defaultcontrol>
+	</include>
+	
+	<include name="Furniture_MovieDefaultControlWall">
+		<defaultcontrol>53</defaultcontrol>
+	</include>
+	
+	<include name="Furniture_MovieDefaultControlMultiWall">
+		<defaultcontrol>57</defaultcontrol>
+	</include>
+	
+	<include name="Furniture_MusicDefaultControlList">
+		<defaultcontrol>50</defaultcontrol>
+	</include>
+	
+	<include name="Furniture_MusicDefaultControlWall">
+		<defaultcontrol>53</defaultcontrol>
+	</include>
+	
+	<include name="Furniture_MusicDefaultControlMultiWall">
+		<defaultcontrol>57</defaultcontrol>
+	</include>
 
 <!-- Time -->
 
@@ -340,7 +370,7 @@
 					<effect type="slide" start="0,1" end="0,1" time="0" /> 
 					<effect type="zoom" start="125" end="125" time="0" />
 				</animation>
-			</control>				
+			</control>		
 			
 		</control>
 		
@@ -658,14 +688,6 @@
 		<width>1280</width>
 		<height>718</height>
 	</include>
-
-	<include name="ShowcaseFloorNight">
-		<texture>showcase/showcase_floor.png</texture>	
-	</include>
-	
-	<include name="ShowcaseFloorLight">
-		<texture>showcase/lite/showcase_floor.png</texture>		
-	</include>
 	
 	<include name="Furniture_MediaPanel">
 		<control type="image">
@@ -680,12 +702,11 @@
 			<posy>315</posy>
 			<width>1280</width>
 			<height>405</height>
-			<include condition="!Skin.HasSetting(darkshowcase)">ShowcaseFloorLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ShowcaseFloorNight</include>			
-			<visible>Control.IsVisible(57) | Control.IsVisible(52)</visible>
+			<texture>multiplex/multiplex_floor.png</texture>			
+			<visible>Control.IsVisible(52)</visible>
 			<include>Animation_CommonFade</include>
-			<include>Animation_HideShowcase</include>
-			<include>Animation_HideMultiplex</include>			
+			<include>Animation_HideMultiplex2</include>
+			<include>Animation_HideMultiplex</include>		
 		</control>
 		
 		<control type="image">
@@ -693,23 +714,11 @@
 			<posy>583</posy>
 			<width>993</width>
 			<height>137</height>
-			<include condition="!Skin.HasSetting(darkshowcase)">ShowcaseSpotLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ShowcaseSpotNight</include>
+			<texture>multiplex/multiplex_spot.png</texture>
 			<include>Animation_CommonFade</include>
-			<include>Animation_HideShowcase</include>
+			<include>Animation_HideMultiplex2</include>
 			<include>Animation_HideMultiplex</include>
-			<visible>Control.IsVisible(57) | Control.IsVisible(52)</visible>
-		</control>
-	
-		<control type="image">
-			<posx>144</posx>
-			<posy>583</posy>
-			<width>993</width>
-			<height>137</height>
-			<include>ShowcaseSpotLight</include>
-			<include>Animation_CommonFade</include>
-			<include>Animation_HideShowcase</include>
-			<visible>Control.IsVisible(50)</visible>
+			<visible>Control.IsVisible(52)</visible>
 		</control>
 		
 		<control type="image">
@@ -717,12 +726,11 @@
 			<posy>315</posy>
 			<width>1280</width>
 			<height>405</height>
-			<include condition="!Skin.HasSetting(darkshowcase)">ListFloorLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">ListFloorNight</include>
+			<texture>list/list_floor.png</texture>
 			<visible>Control.IsVisible(50)</visible>
 
 			<include>Animation_CommonFade</include>
-			<include>Animation_HideShowcase</include>
+			<include>Animation_HideMultiplex2</include>
 			<include>Animation_HideMultiplex</include>				
 		</control>		
 		
@@ -731,8 +739,8 @@
 			<posy>0</posy>
 			<width>464</width>
 			<height>720</height>
-			<texture>showcase/showcase_vignette.png</texture>
-			<visible>[Control.IsVisible(57) | Control.IsVisible(50) | Control.IsVisible(52)] + ![Control.HasFocus(94) | Control.HasFocus(197) | Control.HasFocus(320) | Control.HasFocus(321) | Control.HasFocus(322)]</visible>
+			<texture>multiplex/multiplex_vignette.png</texture>
+			<visible>[Control.IsVisible(50) | Control.IsVisible(52)] + ![Control.HasFocus(94) | Control.HasFocus(197) | Control.HasFocus(320) | Control.HasFocus(321) | Control.HasFocus(322)]</visible>
 			<animation type="Visible">
 				<effect type="fade" start="0" end="100" time="400" easing="inout" tween="cubic" />
 				<effect type="slide" start="-464,0" end="0,0" time="400" easing="inout" tween="cubic" />
@@ -756,8 +764,8 @@
 			<posy>0</posy>
 			<width>464</width>
 			<height>720</height>
-			<texture flipx="true">showcase/showcase_vignette.png</texture>
-			<visible>[Control.IsVisible(57) | Control.IsVisible(50) | Control.IsVisible(52)] + ![Control.HasFocus(94) | Control.HasFocus(197) | Control.HasFocus(320) | Control.HasFocus(321) | Control.HasFocus(322)]</visible>
+			<texture flipx="true">multiplex/multiplex_vignette.png</texture>
+			<visible>[Control.IsVisible(50) | Control.IsVisible(52)] + ![Control.HasFocus(94) | Control.HasFocus(197) | Control.HasFocus(320) | Control.HasFocus(321) | Control.HasFocus(322)]</visible>
 			<animation type="Visible">
 				<effect type="fade" start="0" end="100" time="400" easing="inout" tween="cubic" />
 				<effect type="slide" start="464,0" end="0,0" time="400" easing="inout" tween="cubic" />
@@ -1015,8 +1023,8 @@
 			<posy>675</posy>
 			<width>1280</width>
 			<height>48</height>
-			<texture>showcase/showcase_gradient.png</texture>
-			<visible>Skin.HasSetting(darkshowcase) + [Control.IsVisible(57) | Control.IsVisible(52)]</visible>
+			<texture>multiplex/multiplex_gradient.png</texture>
+			<visible>Control.IsVisible(52)</visible>
 			<include>Animation_CommonFade</include>
 		</control>
 	</include>
@@ -1030,26 +1038,16 @@
 			<posy>23</posy>
 			<width>1233</width>
 			<height>673</height>
-			<include condition="!Skin.HasSetting(darkshowcase)">SettingsBackPanelLight</include>
-			<include condition="Skin.HasSetting(darkshowcase)">SettingsBackPanelNight</include>
-		</control>
-	</include>
-
-	<include name="Furniture_SettingsFrontPanel">
-		<control type="image">
-			<description>Front pane for Settings panel</description>
-			<posx>42</posx>
-			<posy>28</posy>
-			<width>1196</width>
-			<height>651</height>
-			<texture>settings/settings_panelfront.png</texture>
-			<visible>!Skin.HasSetting(darkshowcase)</visible>
+			<texture>settings/settings_panelback.png</texture>
 		</control>
 	</include>
 
 	<include name="Furniture_SettingsInternalBackPanel">
-		<include condition="!Skin.HasSetting(darkshowcase)">SettingsInternalBackPanelLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">SettingsInternalBackPanelNight</include>
+		<posx>234</posx>
+		<posy>41</posy>
+		<width>1033</width>
+		<height>636</height>
+		<texture>settings/settings_intframe_bottom.png</texture>
 	</include>
 
 	<include name="Furniture_SettingsSlideVars">
