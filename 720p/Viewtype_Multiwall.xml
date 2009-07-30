@@ -114,7 +114,7 @@
             <onright>57</onright>
             <onup>7000</onup>
             <ondown>57</ondown>
-			<visible>!Container.Content(songs) + [Container.Content(albums) | Container.Content(artists)]</visible>
+			<visible>Window.IsActive(25) | [!Container.Content(songs) + [Container.Content(albums) | Container.Content(artists)]]</visible>
 			<animation effect="fade" reversible="false" type="fade" start="100" end="0" delay="900">Hidden</animation>
 			<animation effect="fade" reversible="false" type="fade" start="0" end="100">Visible</animation>
         </control>
@@ -185,7 +185,7 @@
 			<viewtype label="multiwall">wrap</viewtype>
 			<include>TVMultiWallVars</include>
 			<pagecontrol>61</pagecontrol>
-			<scrolltime>200</scrolltime>
+			<scrolltime>250</scrolltime>
 			<onleft>57</onleft>
 			<onright>57</onright>
 			<include condition="!Skin.HasSetting(multiwalltvinfotrigger)">MultiwallInfoAutoUp</include>
@@ -277,7 +277,7 @@
 	<include name="MultiWallSongCover">
 		<width>102</width>
 		<height>104</height>
-		<include condition="!Skin.HasSetting(dvdcase)">WallIconNormal</include>	
+		<include condition="!Skin.HasSetting(dvdcase)">MultiWallMusicIconNormalFocus</include>	
 		<include condition="Skin.HasSetting(dvdcase)">MultiWallMusicIconDVD</include>
 	</include>	
 	
@@ -288,7 +288,7 @@
 		<control type="wraplist" id="57">
 			<viewtype label="multiwall">wrap</viewtype>
 			<include>MusicMultiWallVars</include>
-			<scrolltime>200</scrolltime>
+			<scrolltime>250</scrolltime>
 			<onleft>57</onleft>
 			<onright>57</onright>
 			<include condition="!Skin.HasSetting(multiwallmusicinfotrigger)">MultiwallInfoAutoUp</include>
@@ -355,19 +355,20 @@
 			</control>
 			
 			<control type="group">
-				<posx>920</posx>
+				<posx>918</posx>
 				<include>MultiWallSongCover</include>	
 			</control>
 			
 			<control type="group">
-				<posx>1022</posx>
+				<posx>1020</posx>
 				<include>MultiWallSongCover</include>	
 			</control>
 			
 			<control type="group">
 				<posx>510</posx>
 				<include>MultiWallSongCover</include>
-				<animation effect="zoom" center="561,51" start="165" end="165" condition="true">Conditional</animation>
+				<animation effect="zoom" center="558,48" start="170" end="170" condition="!Skin.HasSetting(dvdcase)">Conditional</animation>
+				<animation effect="zoom" center="561,51" start="165" end="165" condition="Skin.HasSetting(dvdcase)">Conditional</animation>
 			</control>
 			
 		</control>
@@ -448,6 +449,7 @@
 				<onright>7000</onright>
 				<pagecontrol>71</pagecontrol>
 				<scrolltime>0</scrolltime>
+				<visible>Window.IsActive(500) | [Container.Content(songs) + Window.IsActive(502)]</visible>
 				<itemlayout height="40">
 					<control type="image">
 						<height>1</height>

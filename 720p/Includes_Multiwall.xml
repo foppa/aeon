@@ -7,8 +7,6 @@
 			<width>670</width>
 			<height>364</height>
 			<texture>multiwall/info_pane_info.png</texture>
-			<include>MultiWallInfoFlipAnimationInfo</include>
-			<include condition="!Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoSlideAnimationMovies</include>	
 		</include>
 		
 		<!-- Info Pane Movies Trailer -->
@@ -16,8 +14,6 @@
 			<width>670</width>
 			<height>364</height>
 			<texture>multiwall/info_pane_trailer.png</texture>
-			<include>MultiWallInfoFlipAnimationTrailer</include>
-			<include condition="!Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoSlideAnimationMovies</include>		
 		</include>
 		
 		<!-- Info Pane Movies + Title -->
@@ -26,8 +22,6 @@
 			<width>670</width>
 			<height>374</height>
 			<texture>multiwall/info_pane_info_title.png</texture>
-			<include>MultiWallInfoFlipAnimationInfo</include>
-			<include condition="!Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoSlideAnimationMovies</include>		
 		</include>
 		
 		<!-- Info Pane Movies Trailer + Title -->
@@ -36,8 +30,6 @@
 			<width>670</width>
 			<height>374</height>
 			<texture>multiwall/info_pane_trailer_title.png</texture>
-			<include>MultiWallInfoFlipAnimationTrailer</include>
-			<include condition="!Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoSlideAnimationMovies</include>	
 		</include>
 	
 		<!-- Info Pane TV -->
@@ -197,6 +189,20 @@
 				</animation>
 			</include>
 	
+			<!-- Trailer ( Off ) -->
+			<include name="MultiWallInfoHideAnimationTrailer">
+				<animation type="Conditional" condition="!Player.HasVideo" reversible="false">
+					<effect type="fade" start="100" end="0" time="300" />
+				</animation>
+			</include>
+	
+			<!-- Trailer ( Auto ) -->
+			<include name="MultiWallInfoShowAnimationTrailerAuto">
+				<animation type="Conditional" condition="!Player.HasVideo + !Control.IsVisible(209)" reversible="false">
+					<effect type="fade" start="100" end="0" time="300" />
+				</animation>
+			</include>
+	
 		<!-- Show Animation -->
 
 			<!-- Normal -->
@@ -229,6 +235,22 @@
 			<include name="MultiWallInfoShowAnimationTriggerMusic">
 				<animation type="Visible" reversible="false">
 					<effect type="slide" start="0,31" end="0,31" time="0" />
+					<effect type="fade" start="0" end="100" time="400" delay="85" />
+					<effect type="zoom" center="auto" start="0" end="100" time="550" tween="back" acceleration="-2" />
+				</animation>
+			</include>
+	
+			<!-- Trailer ( Off ) -->
+			<include name="MultiWallInfoShowAnimationTrailer">
+				<animation type="Conditional" condition="Player.HasVideo" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="85" />
+					<effect type="zoom" center="auto" start="0" end="100" time="550" tween="back" acceleration="-2" />
+				</animation>
+			</include>
+	
+			<!-- Trailer ( Auto ) -->
+			<include name="MultiWallInfoShowAnimationTrailerAuto">
+				<animation type="Conditional" condition="Player.HasVideo + !Control.IsVisible(209)" reversible="false">
 					<effect type="fade" start="0" end="100" time="400" delay="85" />
 					<effect type="zoom" center="auto" start="0" end="100" time="550" tween="back" acceleration="-2" />
 				</animation>
@@ -343,6 +365,41 @@
 			</animation>
 		</include>
 	
+		<!-- Info Flip Animaiton Trigger -->
+		<include name="MultiWallInfoFlipAnimationInfoTrigger">
+			<animation type="Conditional" condition="Player.HasVideo + Control.HasFocus(208)" reversible="false">
+				<effect type="rotatey" center="335" start="0" end="-90" time="450" delay="200" tween="cubic" easing="in" />
+				<effect type="rotatey" center="335" start="-90" end="90" time="0" delay="650"/>
+				<effect type="fade" start="0" end="100" time="0" delay="650" />
+				<effect type="rotatey" center="335" start="90" end="0" time="450" delay="650" tween="cubic" easing="out" />
+			</animation> 
+			<animation type="Conditional" condition="Player.HasVideo + !Control.HasFocus(208)" reversible="false">
+				<effect type="slide" start="0,0" end="0,-35" time="400" tween="cubic" easing="out" />
+				<effect type="rotatey" center="335" start="0" end="90" time="450" delay="550" tween="cubic" easing="in" />
+				<effect type="rotatey" center="335" start="90" end="-90" time="0" delay="1000"/>
+				<effect type="fade" start="100" end="0" time="0" delay="1000" />
+				<effect type="rotatey" center="335" start="-90" end="0" time="450" delay="1000" tween="cubic" easing="out" />
+			</animation>
+		</include>
+	
+		<!-- Trailer Flip Animaiton Trigger -->
+		<include name="MultiWallInfoFlipAnimationTrailerTrigger">
+			<animation type="Conditional" condition="Player.HasVideo + Control.HasFocus(208)" reversible="false">
+				<effect type="slide" start="0,-35" end="0,0" time="200" tween="cubic" easing="in" />
+				<effect type="rotatey" center="335" start="0" end="-90" time="450" delay="200" tween="cubic" easing="in" />
+				<effect type="rotatey" center="335" start="-90" end="90" time="0" delay="650"/>
+				<effect type="fade" start="100" end="0" time="0" delay="650" />
+				<effect type="rotatey" center="335" start="90" end="0" time="450" delay="650" tween="cubic" easing="out" />
+			</animation> 
+			<animation type="Conditional" condition="Player.HasVideo + !Control.HasFocus(208)" reversible="false">
+				<effect type="slide" start="0,0" end="0,-35" time="200" tween="cubic" easing="in" />
+				<effect type="rotatey" center="335" start="0" end="90" time="450" delay="550" tween="cubic" easing="in" />
+				<effect type="rotatey" center="335" start="90" end="-90" time="0" delay="1000"/>
+				<effect type="fade" start="0" end="100" time="0" delay="1000" />
+				<effect type="rotatey" center="335" start="-90" end="0" time="450" delay="1000" tween="cubic" easing="out" />
+			</animation>
+		</include>
+	
 		<!-- Now Playing Flip Animaiton -->
 		<include name="MultiWallInfoFlipAnimationNowPlaying">
 			<animation type="Conditional" condition="[Player.HasAudio + Skin.HasSetting(showplaying) + !Container.Content(songs)] | [Player.HasAudio + !Skin.HasSetting(showplaying) + Container.Content(songs)]" reversible="false">
@@ -414,14 +471,22 @@
 			<posy>0</posy>
 			<width>670</width>
 			<height>374</height>
+			
+			<visible>!Skin.HasSetting(multiwallinfooff)</visible>
 
-			<include>MultiWallInfoFlipAnimationInfo</include>
+			<include condition="!Skin.HasSetting(multiwallinfooff) + !Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoFlipAnimationInfo</include>
+			<include condition="Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoFlipAnimationInfoTrigger</include>
 			<include condition="!Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoSlideAnimationMovies</include>
+			
+			<control type="image">
+				<include condition="!Skin.HasSetting(showtitle)">MultiWallInfoPaneMidInfo</include>
+				<include condition="Skin.HasSetting(showtitle)">MultiWallInfoPaneMidInfoTitle</include>
+			</control>
 			
 			<!-- Title -->
 			<control type="label">
 				<include condition="Skin.HasSetting(showtitle)">MultiWallTitleLabel</include>				
-			</control>		
+			</control>
 				
 			<control type="group">
 				<control type="label">
@@ -560,28 +625,37 @@
 	<include name="MultiWallMovieInfoTrailer">
 		<control type="group">
 			
+			<posx>0</posx>
+			<posy>0</posy>
 			<width>670</width>
 			<height>374</height>
-			<include condition="Skin.HasSetting(showtitle)">MultiWallInfoPanelMovieInfoTitle</include>
-			<include>MultiWallInfoFlipAnimationTrailer</include>
+
+			<include condition="!Skin.HasSetting(multiwallinfooff) + !Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoFlipAnimationTrailer</include>
+			<include condition="Skin.HasSetting(multiwallinfooff)">MultiWallInfoShowAnimationTrailer</include>
 			<include condition="!Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoSlideAnimationMovies</include>
+			<include condition="Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoFlipAnimationTrailerTrigger</include>
+			<include condition="Skin.HasSetting(multiwallinfotrigger)">MultiWallInfoHideAnimationTrailer</include>
+
+			<control type="image">
+				<include condition="!Skin.HasSetting(showtitle)">MultiWallInfoPaneMidTrailer</include>
+				<include condition="Skin.HasSetting(showtitle)">MultiWallInfoPaneMidTrailerTitle</include>
+			</control>
 			
-			<posx>7</posx>
-			<posy>27</posy>
+			<include condition="Skin.HasSetting(showtitle)">MultiWallInfoPanelMovieInfoTitle</include>
 			
 			<posx>108</posx>
 			<posy>65</posy>				
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<posx>7</posx>
+				<posy>27</posy>
 				<width>656</width>
 				<height>298</height>
 				<texture>common/black.png</texture>
 				<colordiffuse>AAFFFFFF</colordiffuse>				
 			</control>		
 			<control type="videowindow" id="2">
-     			<posx>0</posx>
-				<posy>0</posy>
+     			<posx>7</posx>
+				<posy>27</posy>
 				<width>656</width>
 				<height>298</height>
 				<animation effect="fade" start="0" end="100" time="0" delay="900">Visible</animation>
@@ -1247,17 +1321,9 @@
 			<animation effect="fade" end="0" time="200">WindowClose</animation>
 			<posx>305</posx>
 			<posy>122</posy>
-			<control type="image">
-				<include condition="!Skin.HasSetting(showtitle)">MultiWallInfoPaneMidInfo</include>
-				<include condition="Skin.HasSetting(showtitle)">MultiWallInfoPaneMidInfoTitle</include>
-			</control>
-			<control type="image">
-				<include condition="!Skin.HasSetting(showtitle)">MultiWallInfoPaneMidTrailer</include>
-				<include condition="Skin.HasSetting(showtitle)">MultiWallInfoPaneMidTrailerTitle</include>
-			</control>
 			<include>MultiWallInfoPaneMovieInfo</include>
 			<include>MultiWallMovieInfoTrailer</include>
-			<visible>Skin.HasSetting(videomovies) + Control.IsVisible(57) + [Control.IsVisible(209) | Control.HasFocus(208) | Skin.HasSetting(multiwallinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiwallinfotrigger)]]</visible>
+			<visible>Skin.HasSetting(videomovies) + Control.IsVisible(57) + [Control.IsVisible(209) | Control.HasFocus(208) | Skin.HasSetting(multiwallinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiwallinfotrigger)] | [[Skin.HasSetting(multiwallinfooff) | Skin.HasSetting(multiwallinfotrigger)]  + Player.HasVideo]]</visible>
 		</control>
 	</include>
 		

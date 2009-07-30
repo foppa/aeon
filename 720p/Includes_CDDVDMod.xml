@@ -156,17 +156,17 @@
 		<control type="image">
 			<include>MultiWallTrailerIndicator</include>
 			<texture>multiwall/multiwall_trailer.png</texture>
-			<visible>!IsEmpty(ListItem.Trailer) + Player.HasVideo + [Control.IsVisible(57) | [Control.IsVisible(57) + Control.IsVisible(209) + Skin.HasSetting(multiwallinfoon)]]</visible>
-			<animation effect="fade" start="0" end="100" time="200" reversible="false">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+			<visible>!IsEmpty(ListItem.Trailer)</visible>
+			<animation effect="fade" start="0" end="100" time="100" condition="!Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="100" condition="Player.HasVideo">Conditional</animation>
 			<include>MultiWallIconZoomAnimationDVD</include>
 		</control>
 			<control type="image">
 			<include>MultiWallTrailerIndicator</include>
 			<texture>multiwall/multiwall_trailer_playing.png</texture>
-			<visible>!IsEmpty(ListItem.Trailer) + Player.HasVideo + [Control.IsVisible(57) | [Control.IsVisible(57) + Control.IsVisible(209) + Skin.HasSetting(multiwallinfoon)]]</visible>
-			<animation effect="fade" start="0" end="100" time="200" reversible="false">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+			<visible>!IsEmpty(ListItem.Trailer)</visible>
+			<animation effect="fade" start="0" end="100" time="100" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="100" condition="!Player.HasVideo">Conditional</animation>
 			<include>MultiWallIconZoomAnimationDVD</include>
 		</control>
 	</include>
@@ -228,17 +228,17 @@
 		<control type="image">
 			<include>MultiWallTrailerIndicator</include>
 			<texture>multiwall/multiwall_trailer.png</texture>
-			<visible>!IsEmpty(ListItem.Trailer) + Player.HasVideo + [Control.IsVisible(57) | [Control.IsVisible(57) + Control.IsVisible(209) + Skin.HasSetting(multiwallinfoon)]]</visible>
-			<animation effect="fade" start="0" end="100" time="200" reversible="false">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+			<visible>!IsEmpty(ListItem.Trailer)</visible>
+			<animation effect="fade" start="0" end="100" time="100" condition="!Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="100" condition="Player.HasVideo">Conditional</animation>
 			<include>MultiWallIconZoomAnimationDVD</include>
 		</control>
 			<control type="image">
 			<include>MultiWallTrailerIndicator</include>
 			<texture>multiwall/multiwall_trailer_playing.png</texture>
-			<visible>!IsEmpty(ListItem.Trailer) + Player.HasVideo + [Control.IsVisible(57) | [Control.IsVisible(57) + Control.IsVisible(209) + Skin.HasSetting(multiwallinfoon)]]</visible>
-			<animation effect="fade" start="0" end="100" time="200" reversible="false">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+			<visible>!IsEmpty(ListItem.Trailer)</visible>
+			<animation effect="fade" start="0" end="100" time="100" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="100" condition="!Player.HasVideo">Conditional</animation>
 			<include>MultiWallIconZoomAnimationDVD</include>
 		</control>
 	</include>
